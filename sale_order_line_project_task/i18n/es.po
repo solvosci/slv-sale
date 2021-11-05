@@ -1,0 +1,115 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_line_project_task
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 09:44+0000\n"
+"PO-Revision-Date: 2021-11-10 11:04+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,help:sale_order_line_project_task.field_sale_order_line__product_type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory "
+"app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+"Un producto almacenable es un producto para el que gestiona stock. La "
+"aplicación de inventario debe estar instalada.\n"
+"Un producto consumible es un producto para el que no se gestionan las "
+"existencias.\n"
+"Un servicio es un producto no material."
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move_line__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_account_move_line__task_id
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move__task_id
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move_line__task_id
+msgid "Generated Task"
+msgstr "Tareas generadas"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_account_move_line__id
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order_line__id
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move__id
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_order_line_project_task
+#: model:ir.model,name:sale_order_line_project_task.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move____last_update
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_stock_move_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_order_line_project_task
+#: model:ir.model,name:sale_order_line_project_task.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de productos (Línea de movimiento de inventario)"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order_line__product_type
+msgid "Product Type"
+msgstr "Tipo de producto"
+
+#. module: sale_order_line_project_task
+#: model:ir.model,name:sale_order_line_project_task.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sale_order_line_project_task
+#: model:ir.model,name:sale_order_line_project_task.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: sale_order_line_project_task
+#: model:ir.model,name:sale_order_line_project_task.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de inventario"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order__task_ids
+#: model:ir.model.fields,field_description:sale_order_line_project_task.field_sale_order_line__task_ids
+#: model_terms:ir.ui.view,arch_db:sale_order_line_project_task.view_account_move_form_inherit
+#: model_terms:ir.ui.view,arch_db:sale_order_line_project_task.view_sale_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:sale_order_line_project_task.view_stock_move_line_tree_inherit
+#: model_terms:ir.ui.view,arch_db:sale_order_line_project_task.view_stock_move_search_inherit
+#: model_terms:ir.ui.view,arch_db:sale_order_line_project_task.view_stock_move_tree_inherit
+#: model_terms:ir.ui.view,arch_db:sale_order_line_project_task.view_stock_picking_form_inherit
+msgid "Task"
+msgstr "Tarea"
+
+#. module: sale_order_line_project_task
+#: model:ir.model.fields,help:sale_order_line_project_task.field_account_move_line__task_id
+#: model:ir.model.fields,help:sale_order_line_project_task.field_stock_move__task_id
+#: model:ir.model.fields,help:sale_order_line_project_task.field_stock_move_line__task_id
+msgid "Task generated by the sales order item"
+msgstr "Tarea generada por el elemento del pedido de venta"
