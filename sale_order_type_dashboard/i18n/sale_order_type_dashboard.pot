@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_type_dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-16 14:57+0000\n"
+"PO-Revision-Date: 2021-11-16 14:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" title=\"More\"/>"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "<span>View</span>"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "All"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.actions.act_window,name:sale_order_type_dashboard.sale_order_type_dashboard_action
+#: model:ir.ui.menu,name:sale_order_type_dashboard.sale_order_dashboard_menu
+msgid "Dashboard"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "New Quotation"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__invoice_status_no_so_count
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.sale_order_view_search
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Nothing to Bill"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Number of Requests for Quotations"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Number of Sale Orders that have nothing to bill yet"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Number of Sale Orders upsell"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Number of Sale Orders waiting for bills"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.actions.act_window,name:sale_order_type_dashboard.action_sale_form_from_dashboard
+#: model:ir.actions.act_window,name:sale_order_type_dashboard.action_sale_rfq_from_dashboard
+msgid "Quotation"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__state_quotation_so_count
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Quotations"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.actions.act_window,name:sale_order_type_dashboard.action_sale_order_from_dashboard
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__sale_order_ids
+msgid "Sale Orders"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model,name:sale_order_type_dashboard.model_sale_order_type
+msgid "Type of sale order"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__invoice_status_u_so_count
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Upselling Opportunity"
+msgstr ""
+
+#. module: sale_order_type_dashboard
+#: model:ir.model.fields,field_description:sale_order_type_dashboard.field_sale_order_type__invoice_status_ti_so_count
+#: model_terms:ir.ui.view,arch_db:sale_order_type_dashboard.view_sale_order_type_kanban
+msgid "Waiting Bills"
+msgstr ""
