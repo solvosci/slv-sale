@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_sale_rfq_from_dashboard" model="ir.actions.act_window">
+        <field name="name">Quotation</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+        <field name="view_id" ref="sale.view_quotation_tree_with_onboarding" />
+        <field
+            name="search_view_id"
+            ref="sale.sale_order_view_search_inherit_quotation"
+        />
+        <field name="context">
+            {'default_type_id': active_id}
+        </field>
+        <field name="domain">[('type_id', '=', active_id)]</field>
+    </record>
+
+    <record id="action_sale_form_from_dashboard" model="ir.actions.act_window">
+        <field name="name">Quotation</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="sale.view_order_form" />
+        <field name="context">
+            {'default_type_id': active_id}
+        </field>
+    </record>
+
+    <record id="action_sale_order_from_dashboard" model="ir.actions.act_window">
+        <field name="name">Sale Order</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph,calendar,activity</field>
+        <field name="view_id" ref="sale.view_order_tree" />
+        <field name="search_view_id" ref="sale.sale_order_view_search_inherit_sale" />
+        <field name="context">
+            {'default_type_id': active_id}
+        </field>
+        <field
+            name="domain"
+        >[('type_id', '=', active_id), ('state','in',('sale', 'done'))]</field>
+    </record>
+
+    <record id="sale_order_view_search" model="ir.ui.view">
+        <field name="name">sale.order.select (in sale_order_type_dashboard)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_sale" />
+        <field name="arch" type="xml">
+            <filter name="to_invoice" position="before">
+                <filter
+                    name="invoice_status_no"
+                    string="Nothing to Bill"
+                    domain="[('invoice_status', '=', 'no')]"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
