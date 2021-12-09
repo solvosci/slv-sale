@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_picking_inherit_tree_view" model="ir.ui.view">
+        <field name="name">stock.picking.tree (in sale_order_lock_stock_picking)</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-success">sale_order_status=='done'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='json_popover']" position="after">
+                <field name="sale_order_status" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+    <record id="stock_picking_inherit_search_view" model="ir.ui.view">
+        <field name="name">stock.picking.search (in sale_order_lock_stock_picking)</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='cancel']" position="after">
+                <separator />
+                <filter
+                    name="sale_status_locked"
+                    string="Locked Order Sale"
+                    domain="[('sale_order_status', '=', 'done')]"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
