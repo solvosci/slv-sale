@@ -8,6 +8,12 @@ from odoo.exceptions import ValidationError
 class AccountAnalyticLine(models.Model):
     _inherit = "account.analytic.line"
 
+    def _get_locked_fields(self):
+        """
+        Override if needed
+        """
+        return ["project_id", "task_id", "unit_amount"]
+
     def lock_validation_error(self, sale_id):
         if sale_id.state == 'done':
             raise ValidationError( _(
@@ -16,8 +22,14 @@ class AccountAnalyticLine(models.Model):
             )
 
     def write(self, values):
-        for record in self.filtered(lambda x: x.project_id.sale_order_id):
-            self.lock_validation_error(record.project_id.sale_order_id)
+        """
+        Editing a timesheet for non-sensible fields is enabled
+        """
+        val_fields = values.keys()
+        lock_fields = self._get_locked_fields()
+        if any([field in val_fields for field in lock_fields]):
+            for record in self.filtered(lambda x: x.project_id.sale_order_id):
+                self.lock_validation_error(record.project_id.sale_order_id)
         return super(AccountAnalyticLine, self).write(values)
 
     @api.model_create_multi
