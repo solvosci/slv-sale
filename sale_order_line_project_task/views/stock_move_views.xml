@@ -4,6 +4,7 @@
         <field name="name">stock.move.tree (task_id)</field>
         <field name="model">stock.move</field>
         <field name="inherit_id" ref="stock.view_move_tree" />
+        <field name="groups_id" eval="[(4, ref('project.group_project_user'))]"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='product_id']" position="after">
                 <field name="task_id" string="Task" readonly="1" optional="show" />
@@ -15,6 +16,7 @@
         <field name="name">stock.move.search (task_id)</field>
         <field name="model">stock.move</field>
         <field name="inherit_id" ref="stock.view_move_search" />
+        <field name="groups_id" eval="[(4, ref('project.group_project_user'))]"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='partner_id']" position="after">
                 <field name="task_id" string="Task" />

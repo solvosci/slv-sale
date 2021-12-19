@@ -4,6 +4,7 @@
         <field name="name">stock.move.line.tree (task_id)</field>
         <field name="model">stock.move.line</field>
         <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree" />
+        <field name="groups_id" eval="[(4, ref('project.group_project_user'))]"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='product_id']" position="after">
                 <field name="task_id" string="Task" readonly="1" attrs="{'column_invisible': [('parent.tasks_count', '=', 0)]}"/>
