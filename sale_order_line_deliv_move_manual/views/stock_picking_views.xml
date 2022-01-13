@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form (in sale_order_line_deliv_move_manual)</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity_done']"
+                position="after"
+            >
+                <field name="product_invoice_policy" invisible="1"/>
+                <field
+                    name="qty_delivered_dest" 
+                    string="Dest."
+                    attrs="{
+                        'readonly': [('product_invoice_policy', '!=', 'stock_move_dest')],
+                    }"                    
+                    optional="show"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='move_ids_without_package']//form//group//field[@name='quantity_done']"
+                position="after"
+            >
+                <field name="product_invoice_policy" invisible="1"/>
+                <field
+                    name="qty_delivered_dest"
+                    attrs="{
+                        'invisible': [('product_invoice_policy', '!=', 'stock_move_dest')],
+                    }"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
