@@ -35,7 +35,8 @@
         <field name="name">stock.move.tree (Sale Moves)</field>
         <field name="model">stock.move</field>
         <field name="arch" type="xml">
-            <tree default_order="date">
+            <tree default_order="date" decoration-success="menu_invoice_lines_count == 1" decoration-info="menu_invoice_lines_count == 0" decoration-muted="menu_invoice_lines_count > 1">
+                <field name="menu_invoice_lines_count" invisible="1"/>
                 <field name="date"/>
                 <field name="reference"/>
                 <field name="sale_line_id" invisible="1"/>
@@ -48,9 +49,8 @@
                 <field name="quantity_done" string="Quantity" sum="Total Quantity"/>
                 <field name="product_uom" options="{'no_open': True, 'no_create': True}" string="Unit of Measure" groups="uom.group_uom"/>
                 <field name="currency_id" invisible="1"/>
-                <field name="sale_price_unit"/>
-                <field name="sale_line_id" invisible="1"/>
-                <field name="sale_price_amount_total" widget="monetary"  sum="Total Amount"/>
+                <field name="menu_price_unit"/>
+                <field name="menu_price_amount_total" widget="monetary"  sum="Total Amount"/>
                 <field name="state" invisible="1"/>
             </tree>
         </field>
