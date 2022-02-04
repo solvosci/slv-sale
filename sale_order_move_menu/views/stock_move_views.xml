@@ -7,6 +7,7 @@
         <field name="arch" type="xml">
             <search string="Stock Moves">
                 <field name="sale_order" string="Sale Order"/>
+                <field name="sale_user_id" />
                 <field name="product_id"/>
                 <field name="product_categ_id" />
                 <field name="sale_partner_id" />
@@ -41,6 +42,7 @@
                 <field name="reference"/>
                 <field name="sale_line_id" invisible="1"/>
                 <field name="sale_order" widget="many2onebutton"/>
+                <field name="sale_user_id" />
                 <field name="product_id"/>
                 <field name="product_categ_id" />
                 <field name="location_id" options="{'no_create': True}" string="From" optional="hide"/>
