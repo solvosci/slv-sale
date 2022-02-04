@@ -15,6 +15,7 @@ class StockMove(models.Model):
         related='sale_order.partner_id',
         store=True
     )
+    sale_user_id = fields.Many2one(related="sale_line_id.order_id.user_id")
 
     menu_price_unit = fields.Float(
         compute="_compute_menu_price_amount_total",
