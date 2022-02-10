@@ -7,6 +7,12 @@
         <field name="inherit_id" ref="stock.view_picking_form" />
         <field name="arch" type="xml">
             <xpath
+                expr="//field[@name='move_ids_without_package']"
+                position="before"
+            >
+                <field name="sale_id" invisible="1"/>
+            </xpath>
+            <xpath
                 expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity_done']"
                 position="after"
             >
@@ -15,6 +21,7 @@
                     name="qty_delivered_dest" 
                     string="Dest."
                     attrs="{
+                        'column_invisible': [('parent.sale_id', '=', False)],
                         'readonly': [('product_invoice_policy', '!=', 'stock_move_dest')],
                     }"                    
                     optional="show"
@@ -25,10 +32,15 @@
                 position="after"
             >
                 <field name="product_invoice_policy" invisible="1"/>
+                <field name="sale_line_id" invisible="1"/>
                 <field
                     name="qty_delivered_dest"
                     attrs="{
-                        'invisible': [('product_invoice_policy', '!=', 'stock_move_dest')],
+                        'invisible': [
+                            '|',
+                            ('product_invoice_policy', '!=', 'stock_move_dest'),
+                            ('sale_line_id', '=', False),
+                        ],
                     }"
                 />
             </xpath>
