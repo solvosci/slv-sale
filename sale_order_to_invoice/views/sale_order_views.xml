@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree (in sale_order_to_invoice)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <field name="amount_untaxed" position="after">
+                <field
+                    name="amount_to_invoice"
+                    sum="Total To Invoice Tax Excluded"
+                    widget="monetary"
+                    optional="hide"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
