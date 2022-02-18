@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form (client_order_ref)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_order_client_order_ref_mandatory.view_sale_order_form_inherit" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='client_order_ref']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_sale_order_form_inherit2" model="ir.ui.view">
+        <field name="name">sale.order.form (client_order_ref)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_management.sale_order_form_quote" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_order_template_id']" position="after">
+                <field name="client_order_ref_mandatory" invisible="1"/>
+                <field name="client_order_ref" attrs="{'required': [('state', 'in', ['sale', 'done']), ('client_order_ref_mandatory', '=', True)], 'invisible': [('state', 'not in', ['sale', 'done'])]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_sale_order_tree_inherit" model="ir.ui.view">
+        <field name="name">sale.order.tree (client_order_ref)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="client_order_ref" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

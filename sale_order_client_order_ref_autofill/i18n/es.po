@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_client_order_ref_autofill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-01 08:19+0000\n"
+"PO-Revision-Date: 2022-03-01 09:21+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order_type__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order_type__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order_type____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model,name:sale_order_client_order_ref_autofill.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model,name:sale_order_client_order_ref_autofill.model_sale_order_type
+msgid "Type of sale order"
+msgstr "Tipo de pedido de venta"
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order__client_order_ref
+msgid "Work Number"
+msgstr "Nº de trabajo"
+
+#. module: sale_order_client_order_ref_autofill
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order__client_order_ref_mandatory
+#: model:ir.model.fields,field_description:sale_order_client_order_ref_autofill.field_sale_order_type__client_order_ref_mandatory
+msgid "Work Number Mandatory"
+msgstr "Nº de Trabajo obligatorio"
