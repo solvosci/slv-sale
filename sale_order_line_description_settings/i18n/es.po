@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_line_description_settings
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-28 15:59+0000\n"
+"PO-Revision-Date: 2022-03-01 08:23+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model,name:sale_order_line_description_settings.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model,name:sale_order_line_description_settings.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_company__product_inline_description_sale
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_config_settings__product_inline_description_sale
+msgid "Description Sale Inline"
+msgstr "Descripción de venta en linea"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_product_product__display_name
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_company__display_name
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_company__product_default_code_hidden
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_config_settings__product_default_code_hidden
+msgid "Hidden Internal Reference"
+msgstr "Ocultar referencia interna"
+
+#. module: sale_order_line_description_settings
+#: model_terms:ir.ui.view,arch_db:sale_order_line_description_settings.res_config_settings_sale_product_settings_view_form
+msgid "Hide internal reference in description of order lines"
+msgstr "Oculta la referencia interna en la descripción en las líneas de pedido"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_product_product__id
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_company__id
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_line_description_settings
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_product_product____last_update
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_company____last_update
+#: model:ir.model.fields,field_description:sale_order_line_description_settings.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_order_line_description_settings
+#: model:ir.model,name:sale_order_line_description_settings.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sale_order_line_description_settings
+#: model_terms:ir.ui.view,arch_db:sale_order_line_description_settings.res_config_settings_sale_product_settings_view_form
+msgid "Remove line break when adding a sale description on a product in order lines"
+msgstr "Elimina el salto de línea cuando se añade una descripción de venta en un producto en las líneas de pedido"
