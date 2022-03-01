@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_line_tree" model="ir.ui.view">
+        <field name="name">sale.order.line.tree (in sale_order_line_menu_advanced)</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale_order_line_menu.view_order_line_tree" />
+        <field name="arch" type="xml">
+            <field name="price_subtotal" position="after">
+                <field
+                    name="picking_first_date"
+                    widget="date"
+                    optional="show"
+                />
+                <field
+                    name="invoice_first_date"
+                    optional="show"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sales_order_line_filter" model="ir.ui.view">
+        <field name="name">sale.order.line.select (in sale_order_line_menu_advanced)</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.view_sales_order_line_filter" />
+        <field name="arch" type="xml">
+            <filter name="my_sales_order_lines" position="after">
+                <filter
+                    string="Picking First Date"
+                    name="picking_first_date"
+                    date="picking_first_date"
+                />
+                <separator/>
+            </filter>
+            <xpath expr="//group/filter[@name='salesperson']" position="after">
+                <filter
+                    string="Picking First Date"
+                    name="group_by_picking_first_date"
+                    domain="[]"
+                    context="{'group_by':'picking_first_date'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
