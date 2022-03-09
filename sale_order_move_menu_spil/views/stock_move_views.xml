@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_move_move_menu_tree" model="ir.ui.view">
+        <field name="name">
+            stock.move.tree (Sale Moves) (in sale_order_move_menu_spil)
+        </field>
+        <field name="model">stock.move</field>
+        <field
+            name="inherit_id"
+            ref="sale_order_move_menu.stock_move_move_menu_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="menu_invoice_first_date" optional="show"/>
+            </field>
+        </field>
+    </record>
+</odoo>
