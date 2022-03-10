@@ -10,7 +10,7 @@
             ref="sale_order_move_menu.stock_move_move_menu_tree"
         />
         <field name="arch" type="xml">
-            <field name="date" position="after">
+            <field name="menu_price_amount_total" position="after">
                 <field name="menu_invoice_first_date" optional="show"/>
             </field>
         </field>
