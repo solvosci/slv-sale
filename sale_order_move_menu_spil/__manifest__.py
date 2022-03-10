@@ -7,7 +7,7 @@
     """,
     "author": "Solvos",
     "license": "AGPL-3",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.1.0",
     "category": "Sale",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": ["sale_order_move_menu", "stock_picking_invoice_link"],
