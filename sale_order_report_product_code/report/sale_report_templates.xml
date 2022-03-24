@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_saleorder_document_product_code"
+        inherit_id="sale.report_saleorder_document"
+        primary="True"
+    >
+        <xpath expr="//th[@name='th_description']" position="before">
+            <th name="th_productcode" class="text-left">Product</th>
+        </xpath>   
+        <xpath expr="//td[@name='td_name']" position="before">
+            <td name="td_name">
+                <span t-field="line.product_id.default_code"/>
+            </td>
+        </xpath>   
+    </template>
+
+    <template id="report_saleorder_product_code">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="sale_order_report_product_code.report_saleorder_document_product_code"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+    <template id="report_saleorder_pro_forma_product_code">
+        <t t-call="web.html_container">
+            <t t-set="is_pro_forma" t-value="True"/>
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="sale_order_report_product_code.report_saleorder_document_product_code"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+</odoo>
