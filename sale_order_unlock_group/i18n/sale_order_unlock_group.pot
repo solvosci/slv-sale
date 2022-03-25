@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_unlock_group
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-01 09:56+0000\n"
+"PO-Revision-Date: 2022-04-01 09:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_unlock_group
+#: model:res.groups,name:sale_order_unlock_group.group_sale_unlock
+msgid "Can (un)lock Sale Orders"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:ir.model,name:sale_order_unlock_group.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_sale_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__id
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__group_auto_done_disable_setting
+msgid "Lock Confirmed Sales- Make initially unlocked"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model_terms:ir.ui.view,arch_db:sale_order_unlock_group.res_config_settings_view_form
+msgid "Orders can still be locked, but are initially unlocked once confirmed"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:res.groups,name:sale_order_unlock_group.group_auto_done_disable_setting
+msgid "Sale Orders Auto Done - Make initially unlocked"
+msgstr ""
+
+#. module: sale_order_unlock_group
+#: model:ir.model,name:sale_order_unlock_group.model_sale_order
+msgid "Sales Order"
+msgstr ""

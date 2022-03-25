@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sales_order_auto_done_setting" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_order_unlock_group)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_auto_done_setting" />
+        <field
+            name="groups_id"
+            eval="[(4, ref('sale_order_unlock_group.group_sale_unlock'))]"
+        />
+        <field eval="100" name="priority"/>
+        <field name="arch" type="xml">
+            <button name="action_done" position="attributes">
+                <attribute name="groups">
+                    sale_order_unlock_group.group_sale_unlock
+                </attribute>
+            </button>
+            <button name="action_unlock" position="attributes">
+                <attribute name="groups">
+                    sale_order_unlock_group.group_sale_unlock
+                </attribute>
+            </button>
+        </field>
+    </record>
+</odoo>

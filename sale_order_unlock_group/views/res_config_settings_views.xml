@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.sale (in sale_order_unlock_group)</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div id="no_edit_order" position="after">
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="no_edit_order_disable"
+                    attrs="{'invisible': [('group_auto_done_setting','=',False)]}"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="group_auto_done_disable_setting"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="group_auto_done_disable_setting"/>
+                        <div class="text-muted">
+                            Orders can still be locked, but are initially unlocked once confirmed
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </field>
+    </record>
+</odoo>
