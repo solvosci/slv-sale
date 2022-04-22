@@ -8,7 +8,7 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Project",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": ["sale_timesheet"],
