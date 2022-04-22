@@ -28,23 +28,25 @@ class AccountAnalyticLine(models.Model):
         val_fields = values.keys()
         lock_fields = self._get_locked_fields()
         if any([field in val_fields for field in lock_fields]):
-            for record in self.filtered(lambda x: x.project_id.sale_order_id):
+            self_sudo = self.sudo()
+            for record in self_sudo.filtered(lambda x: x.project_id.sale_order_id):
                 self.lock_validation_error(record.project_id.sale_order_id)
         return super(AccountAnalyticLine, self).write(values)
 
     @api.model_create_multi
     def create(self, vals_list):
-        Project = self.env['project.project']
+        ProjectSudo = self.env['project.project'].sudo()
         for vals in vals_list:
             project_id = (
                 vals.get('project_id', False)
-                and Project.browse(vals.get('project_id'))
+                and ProjectSudo.browse(vals.get('project_id'))
             )
             if project_id and project_id.sale_order_id:
                 self.lock_validation_error(project_id.sale_order_id)
         return super(AccountAnalyticLine, self).create(vals_list)
 
     def unlink(self):
-        for record in self.filtered(lambda x: x.project_id.sale_order_id):
+        self_sudo = self.sudo()
+        for record in self_sudo.filtered(lambda x: x.project_id.sale_order_id):
             self.lock_validation_error(record.project_id.sale_order_id)
         return super().unlink()
