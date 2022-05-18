@@ -28,13 +28,6 @@ retrieving invoice data from a stock move.
 .. contents::
    :local:
 
-Known issues / Roadmap
-======================
-
-Parent addon ``sale_order_move_menu`` actually has an partially invoice
-related field (``menu_price_amount_total``). This field maybe could be moved
-to this addon.
-
 Bug Tracker
 ===========
 
@@ -57,6 +50,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * David Alonso <david.alonso@solvos.es>
+* Christian Santamaría <christian.santamaria@solvos.es>
 
 Maintainers
 ~~~~~~~~~~~

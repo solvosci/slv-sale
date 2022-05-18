@@ -10,9 +10,46 @@
             ref="sale_order_move_menu.stock_move_move_menu_tree"
         />
         <field name="arch" type="xml">
-            <field name="menu_price_amount_total" position="after">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="decoration-success">menu_invoice_lines_count == 1</attribute>
+                <attribute name="decoration-info">menu_invoice_lines_count == 0</attribute>
+                <attribute name="decoration-muted">menu_invoice_lines_count > 1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date']" position="before">
+                <field name="menu_invoice_lines_count" invisible="1"/>
+                <field name="menu_negative_amount" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='sale_partner_id']" position="after">
+                <field name="menu_quantity_done" options="{'fg_color': 'red: menu_negative_amount == True'}" string="Quantity" sum="Total Quantity"/>
+            </xpath>
+            <xpath expr="//field[@name='product_uom']" position="after">
+                <field name="currency_id" invisible="1"/>
+                <field name="menu_price_unit" />
+                <field name="menu_price_amount_total" options="{'fg_color': 'red: menu_negative_amount == True'}" widget="monetary"  sum="Total Amount"/>
                 <field name="menu_invoice_first_date" optional="show"/>
-            </field>
+            </xpath>
         </field>
     </record>
+
+    <record id="stock_move_move_menu_search" model="ir.ui.view">
+        <field name="name">
+            stock.move.tree (Sale Moves) (in sale_order_move_menu_spil)
+        </field>
+        <field name="model">stock.move</field>
+        <field 
+            name="inherit_id"
+            ref="sale_order_move_menu.stock_move_move_menu_search"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='date']" position="after">
+                <separator />
+                <filter string="Only Returns" name="filter_only_returns" domain="[('picking_code','=', 'incoming')]"/>
+                <filter string="Without Returns" name="filter_without_returns" domain="[('picking_code','!=', 'incoming')]"/>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_location_dest_id']" position="after">
+                <filter string="First Invoice Date" name="groupby_menu_invoice_first_date" domain="[]" context="{'group_by': 'menu_invoice_first_date'}"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
