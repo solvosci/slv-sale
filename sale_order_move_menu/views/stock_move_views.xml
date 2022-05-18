@@ -25,7 +25,8 @@
                     <filter string="Picking" name="groupby_picking_id" domain="[]" context="{'group_by': 'picking_id'}"/>
                     <filter string="Sale Order" name="groupby_sale_order" domain="[]" context="{'group_by': 'sale_order'}"/>
                     <filter string="Customer" name="groupby_sale_partner_id" domain="[]" context="{'group_by': 'sale_partner_id'}"/>
-                    <filter string="Date" name="date" domain="[]" context="{'group_by': 'date'}"/>
+                    <filter string="Date" name="date" date="date" domain="[]" context="{'group_by': 'date'}"/>
+                    <filter string="Location Dest" name="groupby_location_dest_id" domain="[]" context="{'group_by': 'location_dest_id'}"/>
                 </group>
                 
             </search>
@@ -36,8 +37,7 @@
         <field name="name">stock.move.tree (Sale Moves)</field>
         <field name="model">stock.move</field>
         <field name="arch" type="xml">
-            <tree default_order="date" decoration-success="menu_invoice_lines_count == 1" decoration-info="menu_invoice_lines_count == 0" decoration-muted="menu_invoice_lines_count > 1">
-                <field name="menu_invoice_lines_count" invisible="1"/>
+            <tree default_order="date">
                 <field name="date"/>
                 <field name="reference"/>
                 <field name="sale_line_id" invisible="1"/>
@@ -48,11 +48,7 @@
                 <field name="location_id" options="{'no_create': True}" string="From" optional="hide"/>
                 <field name="location_dest_id" options="{'no_create': True}" string="To" optional="show"/>
                 <field name="sale_partner_id" />
-                <field name="quantity_done" string="Quantity" sum="Total Quantity"/>
                 <field name="product_uom" options="{'no_open': True, 'no_create': True}" string="Unit of Measure" groups="uom.group_uom"/>
-                <field name="currency_id" invisible="1"/>
-                <field name="menu_price_unit"/>
-                <field name="menu_price_amount_total" widget="monetary"  sum="Total Amount"/>
                 <field name="state" invisible="1"/>
             </tree>
         </field>
