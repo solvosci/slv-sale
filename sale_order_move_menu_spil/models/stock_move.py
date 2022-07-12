@@ -45,7 +45,7 @@ class StockMove(models.Model):
         store=True
     )
 
-    @api.depends("state", "sale_line_id.price_unit", "invoice_line_ids.move_id.state")
+    @api.depends("state", "sale_line_id.price_unit", "invoice_line_ids.move_id.state", "invoice_line_ids.price_unit", "quantity_done")
     def _compute_sale_move_menu(self):
         precision = self.env["decimal.precision"].precision_get("Product Price")
         for record in self:
