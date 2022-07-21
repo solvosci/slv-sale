@@ -12,3 +12,12 @@ class SaleOrder(models.Model):
         if self.type_id.terms_template_id:
             self.terms_template_id = self.type_id.terms_template_id
             self._onchange_terms_template_id()
+
+    def _prepare_invoice(self):
+        """
+        Prevent HTML order Terms & Conditions to the invoice, which is simply
+        text based
+        """
+        invoice_values = super()._prepare_invoice()
+        invoice_values.pop("narration")
+        return invoice_values
