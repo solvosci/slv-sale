@@ -12,6 +12,7 @@
             </field>
             <field name="binding_model_id" ref="sale.model_sale_order" />
             <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="reports_ar.paperformat_euro_sale_ar"/>
         </record>
 
         <record id="action_report_saleorder_pro_forma_product_code" model="ir.actions.report">
@@ -25,6 +26,7 @@
             </field>
             <field name="binding_model_id" ref="sale.model_sale_order" />
             <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="reports_ar.paperformat_euro_sale_ar"/>
             <field name="groups_id" eval="[(4, ref('sale.group_proforma_sales'))]"/>
         </record>
     </data>

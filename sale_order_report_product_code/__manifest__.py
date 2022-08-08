@@ -8,10 +8,13 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Sales",
     "website": "https://github.com/solvosci/slv-sale",
-    "depends": ["sale"],
+    "depends": [
+        "sale",
+        "reports_ar"
+    ],
     "data": [
         "report/sale_report_templates.xml",
         "report/sale_report.xml",

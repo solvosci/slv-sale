@@ -1,1 +1,2 @@
 sale-workflow
+slv-reports https://github.com/solvosci/slv-reports
