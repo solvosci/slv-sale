@@ -11,12 +11,10 @@
                 position="before">
                 <field
                     name="secondary_uom_qty"
-                    class="oe_inline oe_no_button"
                     attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}"
                 />
                 <field
                     name="secondary_uom_id"
-                    class="oe_inline"
                     attrs="{'readonly': [('state', 'in', ('done', 'cancel'))]}"
                 />
             </xpath>
