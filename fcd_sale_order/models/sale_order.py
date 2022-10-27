@@ -13,3 +13,5 @@ class SaleOrderLine(models.Model):
         for line in self:
             if line.lot_id.fcd_origin_lot_id:
                 line.purchase_price = line.lot_id.fcd_origin_lot_id.fcd_document_line_id.price_real_kg
+            elif line.lot_id.fcd_document_line_id:
+                line.purchase_price = line.lot_id.fcd_document_line_id.price_real_kg
