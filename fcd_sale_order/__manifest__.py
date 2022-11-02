@@ -16,6 +16,8 @@
         "sale_margin",
         "sale_order_secondary_unit",
     ],
-    "data": [],
+    "data": [
+        "views/sale_order_line_views.xml"
+    ],
     'installable': True,
 }
