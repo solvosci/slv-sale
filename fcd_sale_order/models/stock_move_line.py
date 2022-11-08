@@ -81,3 +81,54 @@ class StockMoveLine(models.Model):
             "sale_price_kg": 0.0,
             "sale_margin": 0.0,
         })
+
+    @api.model
+    def read_group(
+        self,
+        domain,
+        fields,
+        groupby,
+        offset=0,
+        limit=None,
+        orderby=False,
+        lazy=True
+    ):
+        """
+        TODO be careful with performance!!!
+        """
+        res = super(StockMoveLine, self).read_group(
+            domain,
+            fields,
+            groupby,
+            offset=offset,
+            limit=limit,
+            orderby=orderby,
+            lazy=lazy
+        )
+        group_fields = ["fcd_purchase_price_kg", "sale_price_kg"]
+        # fields should be filled like "field1:sum"adnmi
+        fields = [x.split(":")[0] for x in fields]
+        if any([x in fields for x in group_fields]):
+            for line in res:
+                line.update({
+                    "fcd_purchase_price_kg": 0.0,
+                    "sale_price_kg": 0.0,
+                })
+                # TODO float_is_zero
+                if abs(line["qty_done"]) > 0.0:
+                    total_line_purchase = 0.0
+                    total_line_sale = 0.0
+                    lines = self.search(line.get("__domain", domain))
+                    for line_item in lines:
+                        total_line_purchase += (
+                            line_item.qty_done*line_item.fcd_purchase_price_kg
+                        )
+                        total_line_sale += (
+                            line_item.qty_done*line_item.sale_price_kg
+                        )
+                    line.update({
+                        "fcd_purchase_price_kg": total_line_purchase/line["qty_done"],
+                        "sale_price_kg": total_line_sale/line["qty_done"],
+                    })
+
+        return res
