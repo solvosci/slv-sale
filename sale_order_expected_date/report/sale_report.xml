@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_sale_order_document_inherit_sale" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='expiration_date']" position="after">
+                <div t-if="doc.expected_days and doc.state in ['draft', 'sent']" class="col-auto col-3 mw-100 mb-2">
+                        <t t-set="expected_days_int" t-value="int(doc.expected_days)"/>
+                        <strong>Expected:</strong>
+                        <p> <t t-esc="expected_days_int" /> days </p>
+                </div>
+                <div t-if="doc.expected_date and doc.state in ['sale', 'done']" class="col-auto col-3 mw-100 mb-2">
+                        <strong>Expected date:</strong>
+                        <p class="m-0" t-field="doc.expected_date" t-options="{'widget': 'date'}"/>
+                </div>
+        </xpath> 
+    </template>
+</odoo>
