@@ -17,28 +17,25 @@ class SaleOrderLine(models.Model):
                 line.purchase_price = line.lot_id.fcd_document_line_id.price_real_kg
 
     def action_open_stock_quant(self):
-        # self.ensure_one()
-        # action = self.env.ref("stock.dashboard_open_quants").read()[0]
-        # action["context"] = {
-        #     "search_default_product_id": self.product_id.id,
-        #     "group_by": ["lot_id"],
-        # }
-        # return action
-
         self.ensure_one()
-        stock_quant_ids = self.env['stock.quant'].search([])
+        stock_quant_ids = self.env['stock.quant'].search([
+            ('location_id.usage','=', 'internal'),
+            ('product_id', '=', self.product_id.id)
+        ])
+
+        wizard_ids = self.env['fcd.stock.quant.wizard']
+        for record in stock_quant_ids:
+            wizard_ids += self.env['fcd.stock.quant.wizard'].create({
+                'stock_quant_id': record.id,
+                'sale_line_id': self.id,
+            })
 
         return {
             'name': _('Stock Quant'),
-            'res_model': 'stock.quant',
-            'view_mode': 'tree',
-            'view_type': 'tree',
-            'res_id': stock_quant_ids.ids,
+            'res_model': 'fcd.stock.quant.wizard',
+            'view_mode': 'list',
+            'view_type': 'list',
+            'domain': [('id', 'in', wizard_ids.ids)],
             'target': 'new',
             'type': 'ir.actions.act_window',
-            'domain': [('location_id.usage','=', 'internal')],
-            'context': {
-                "search_default_product_id": self.product_id.id,
-                # "group_by": ["lot_id"],
-            }
         }
