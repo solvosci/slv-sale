@@ -19,7 +19,8 @@ Sale Order Client Order Ref Mandatory
 
 |badge1| |badge2| |badge3| 
 
-Adds required client_order_ref field and reposition it
+For a Sale Order, makes required client_order_ref field and reposition it,
+for both form view and Sale reports.
 
 **Table of contents**
 
@@ -48,6 +49,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * Christian Santamaría <christian.santamaria@solvos.es>
+* David Alonso <david.alonso@solvos.es>
 
 Maintainers
 ~~~~~~~~~~~
