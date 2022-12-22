@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.client.order.ref.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field
+                    name="client_order_ref"
+                    optional="show"
+                    string="Client ref."
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree (in sale_order_client_order_ref_tree)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field
+                    name="client_order_ref"
+                    optional="show"
+                    string="Client ref."
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_sales_order_filter" model="ir.ui.view">
+        <field name="name">sale.order.list.select (in sale_order_client_order_ref_tree)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter" />
+        <field name="arch" type="xml">
+            <filter name="activities_upcoming_all" position="after">
+                <separator/>
+                <filter
+                    string="Without client reference"
+                    name="filter_wo_client_order_ref"
+                    domain="[('client_order_ref', '=', False)]"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
