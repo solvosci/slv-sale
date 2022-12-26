@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_fcd_stock_quant_wizard" model="ir.ui.view">
+        <field name="name">fcd.stock.quant.wizard</field>
+        <field name="model">fcd.stock.quant.wizard</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="location_id" />
+                <field name="lot_id" />
+                <!-- <field name="secondary_uom_ids" widget="many2many_tags" /> -->
+                <field name="inventory_quantity_secondary_uom" />
+                <field name="product_stock_secondary_uom_id" />
+                <field name="inventory_quantity" />
+                <field name="available_quantity" />
+                <field name="purchase_price" />
+                <field name="value" />
+                <button
+                    name="action_select_lot"
+                    icon="fa-mail-forward"
+                    type="object"
+                />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_saleorder_document_inherit"
+        inherit_id="sale_order_secondary_unit.report_saleorder_document"
+    >
+        <span t-esc="' {}-{}-{}'.format(line.secondary_uom_id.name, line.secondary_uom_id.factor, line.secondary_uom_id.product_tmpl_id.uom_id.name)" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </span>
+        <span t-esc="' {}-{}-{}'.format(line.secondary_uom_id.name, line.secondary_uom_id.factor, line.secondary_uom_id.product_tmpl_id.uom_id.name)" position="after">
+            <span t-esc="' {}'.format(line.secondary_uom_id.name)"/>
+        </span>
+    </template>
+</odoo>

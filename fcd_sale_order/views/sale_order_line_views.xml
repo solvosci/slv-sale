@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form (fcd_sale_order)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='product_uom']" position="before">
+                <button
+                    name="action_open_stock_quant"
+                    icon="fa-th-large"
+                    class="p-0"
+                    type="object"
+                    title="Open Stock Quant"
+                />
+            </xpath>
+        </field>
+    </record -->
+
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form lot selection (fcd_sale_order)</field>
+        <field name="model">sale.order</field>
+        <field
+            name="inherit_id"
+            ref="sale_order_lot_selection.view_order_tree_lot"
+        />
+        <field
+            name="groups_id"
+            eval="[(4, ref('stock.group_production_lot'))]"
+        />
+        <field name="arch" type="xml">
+            <!-- xpath expr="//tree/field[@name='product_uom']" position="before">
+                <button
+                    name="action_open_stock_quant"
+                    icon="fa-th-large"
+                    class="p-0"
+                    type="object"
+                    title="Open Stock Quant"
+                />
+            </xpath -->
+            <!-- Force lot selection from wizard -->
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='lot_id']"
+                position="attributes"
+            >
+                <attribute name="readonly">True</attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='lot_id']"
+                position="after"
+            >
+                <field name="lot_location_id" readonly="True" groups="base.group_no_one"/>
+                <button
+                    name="action_open_stock_quant"
+                    icon="fa-th-large"
+                    class="p-0"
+                    type="object"
+                    title="Open Stock Quant"
+                    attrs="{'invisible': [('state', 'in', ['done', 'cancel'])]}"
+                />
+                <button
+                    name="action_remove_lot"
+                    icon="fa-eraser"
+                    class="p-0"
+                    type="object"
+                    title="Remove selected lot"
+                    attrs="{'invisible': [
+                        '|',
+                        ('lot_id', '=', False),
+                        ('state', 'in', ['done', 'cancel']),
+                    ]}"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']/form/group/group/field[@name='lot_id']"
+                position="after"
+            >
+                <field name="lot_location_id" groups="base.group_no_one"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_sale_order_secondary_unit_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form secondary unit (fcd_sale_order)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_order_secondary_unit.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='secondary_uom_id']" position="attributes">
+                <attribute name="domain">[('product_tmpl_id.product_variant_ids', 'in', [product_id]), ('factor', '!=', 0)]</attribute>
+            </xpath>
+            <xpath expr="//form//field[@name='secondary_uom_id']" position="attributes">
+                <attribute name="domain">[('product_tmpl_id.product_variant_ids', 'in', [product_id]), ('factor', '!=', 0)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
