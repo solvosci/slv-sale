@@ -1,0 +1,226 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fcd_sale_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 08:27+0000\n"
+"PO-Revision-Date: 2022-11-28 09:28+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__available_quantity
+msgid "Available Quantity"
+msgstr "Cantidad disponible"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__purchase_price
+msgid "Cost"
+msgstr "Coste"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,help:fcd_sale_order.field_stock_move_line__sale_date_order
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
+"Fecha de creación de los pedidos en borradores/enviados,\n"
+"Fecha de confirmación de las órdenes confirmadas."
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__currency_id
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__display_name
+#: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move__display_name
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__fcd_origin_lot_id
+msgid "Fcd Origin Lot"
+msgstr "Lote original FCD"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__id
+#: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line__id
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move__id
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__id
+msgid "ID"
+msgstr "Id."
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__inventory_quantity
+msgid "Inventoried Quantity"
+msgstr "Cantidad a mano"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard____last_update
+#: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line____last_update
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move____last_update
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__location_id
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__lot_id
+msgid "Lot/Serial Number"
+msgstr "Lote/Nº de serie"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_margin
+msgid "Margin"
+msgstr "Margen"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,help:fcd_sale_order.field_fcd_stock_quant_wizard__available_quantity
+msgid ""
+"On hand quantity which hasn't been reserved on a transfer, in the default "
+"unit of measure of the product"
+msgstr ""
+"Cantidad disponible que no se ha reservado en una transferencia, en la "
+"unidad de medida predeterminada del producto"
+
+#. module: fcd_sale_order
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.view_sale_order_form_inherit
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.view_stock_move_line_operation_tree
+msgid "Open Stock Quant"
+msgstr "Abrir stock a mano"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,help:fcd_sale_order.field_stock_move_line__partner_id
+msgid ""
+"Optional address where goods are to be delivered, specifically used for "
+"allotment"
+msgstr ""
+"Dirección opcional donde se entregarán los bienes, específicamente "
+"utilizada para la asignación"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_date_order
+msgid "Order Date"
+msgstr "Fecha del pedido"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__partner_id
+msgid "Partner"
+msgstr "Contacto"
+
+#. module: fcd_sale_order
+#: model:ir.model,name:fcd_sale_order.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__fcd_purchase_price_kg
+msgid "Purchase Price (kg)"
+msgstr "Precio kg compra"
+
+#. module: fcd_sale_order
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.view_stock_move_line_sale_pivot
+msgid "Qty"
+msgstr "Cant."
+
+#. module: fcd_sale_order
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.stock_move_line_sale_view_search
+msgid "Sale Date"
+msgstr "Fecha Venta"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__sale_line_id
+msgid "Sale Line"
+msgstr "Línea venta"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_price_kg
+msgid "Sale Price (kg)"
+msgstr "Precio kg venta"
+
+#. module: fcd_sale_order
+#: model:ir.actions.act_window,name:fcd_sale_order.action_stock_move_line_sale_pivot
+#: model:ir.ui.menu,name:fcd_sale_order.menu_stock_move_line_sale_margin
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.view_stock_move_line_sale_pivot
+msgid "Sales Margin by Move"
+msgstr "Margen de ventas por operación"
+
+#. module: fcd_sale_order
+#: model:ir.model,name:fcd_sale_order.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__secondary_uom_ids
+msgid "Secondary Uom"
+msgstr "Cantidad de cajas"
+
+#. module: fcd_sale_order
+#: model:ir.model,name:fcd_sale_order.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento Inventario"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__stock_move_line_id
+msgid "Stock Move Line"
+msgstr "Línea de pedido de venta"
+
+#. module: fcd_sale_order
+#: code:addons/fcd_sale_order/models/sale_order_line.py:0
+#: code:addons/fcd_sale_order/models/stock_move_line.py:0
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__stock_quant_id
+#, python-format
+msgid "Stock Quant"
+msgstr "Stock a mano"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__value
+msgid "Value"
+msgstr "Valor"
+
+#. module: fcd_sale_order
+#: model:ir.model,name:fcd_sale_order.model_fcd_stock_quant_wizard
+msgid "fcd.stock.quant.wizard"
+msgstr ""
+
+#. module: sale_order_action_confirm_multi
+#: model:ir.actions.server,name:sale_order_action_confirm_multi.action_sale_order_confirm_multi
+msgid "Confirm and Validate"
+msgstr "Confirmar y validar"
