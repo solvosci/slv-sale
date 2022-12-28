@@ -1,5 +1,5 @@
 # © 2022 Solvos Consultoría Informática (<http://www.solvos.es>)
-# License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models, api, _
 
@@ -14,7 +14,7 @@ class SaleOrderLine(models.Model):
         with source location, that can be used in stock move line completion
         process
         """,
-    )    
+    )
 
     @api.depends('product_id', 'company_id', 'currency_id', 'product_uom', 'lot_id')
     def _compute_purchase_price(self):

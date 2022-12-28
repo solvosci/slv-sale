@@ -1,13 +1,13 @@
 # © 2022 Solvos Consultoría Informática (<http://www.solvos.es>)
-# License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "FCD Sale Order",
     "summary": """
         Adds sale order link with fcd
     """,
     "author": "Solvos",
-    "license": "LGPL-3",
-    "version": "14.0.1.0.0",
+    "license": "AGPL-3",
+    "version": "14.0.1.0.1",
     "category": "Sale",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": [

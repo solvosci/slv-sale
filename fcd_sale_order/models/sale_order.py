@@ -1,5 +1,5 @@
 # © 2022 Solvos Consultoría Informática (<http://www.solvos.es>)
-# License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import models, fields, api, _
 
@@ -28,7 +28,10 @@ class SaleOrder(models.Model):
     def _constrains_fcd_import(self):
         if self.fcd_import:
             for line in self.order_line:
+                #TODO: Check conversion to avoid reference assignment
+                import_qty = float(line.product_uom_qty)
                 line.secondary_uom_id = line.product_id.sale_secondary_uom_id.id
+                line.product_uom_qty = import_qty
                 line.lot_id = line.lot_id.search([('name', '=', line.lot_id.name), ('product_id', '=', line.product_id.id)])
 
     def action_sale_order_confirm_multi(self):
