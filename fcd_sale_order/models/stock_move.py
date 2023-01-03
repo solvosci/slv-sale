@@ -13,6 +13,7 @@ class StockMove(models.Model):
         elif self.sale_line_id:
             values = {
                 'move_id': self.id,
+                'picking_id': self.picking_id.id,
                 'company_id': self.company_id.id,
                 'product_id': self.product_id.id,
                 'product_uom_id': self.product_uom.id,
