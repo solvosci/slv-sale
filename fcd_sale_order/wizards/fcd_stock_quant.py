@@ -44,6 +44,7 @@ class FCDStockQuant(models.TransientModel):
         # Else open wizard from stock.move.line
         else:
             self.stock_move_line_id.lot_id = self.lot_id.id
+            self.stock_move_line_id.secondary_uom_qty = self.stock_move_line_id.move_id.secondary_uom_qty
             self.stock_move_line_id.qty_done = self.stock_move_line_id.move_id.product_uom_qty
             self.stock_move_line_id.location_id = self.location_id.id
             return self.stock_move_line_id.move_id.action_show_details()
