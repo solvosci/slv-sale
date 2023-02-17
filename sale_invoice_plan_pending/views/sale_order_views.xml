@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_invoice_qty_number" model="ir.ui.view">
+        <field name="name">sale.order.invoice.qty.number.tree (in sale_invoice_plan_pending)</field>
+        <field name="model">sale.order</field>
+        <field
+            name="inherit_id"
+            ref="sale_order_invoice_qty_number.sale_order_invoice_qty_number"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_number_count']" position="after">
+                <field
+                    name="invoice_plan_pending"
+                    optional="hide"
+                    string="Pend."
+                    decoration-bf="invoice_plan_pending &gt; 0"
+                />
+            </xpath> 
+        </field>
+    </record>
+    
+    <record id="sale_order_invoice_qty_number_filter" model="ir.ui.view">
+        <field name="name">sale.order.invoice.qty.number.search (in sale_invoice_plan_pending)</field>
+        <field name="model">sale.order</field>
+        <field
+            name="inherit_id"
+            ref="sale_order_invoice_qty_number.sale_order_invoice_qty_number_filter"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_number_count']" position="after">
+                <field name="invoice_plan_pending" string="Pending plans" />
+            </xpath>
+           <xpath expr="//filter[@name='invoice_number_count']" position="after">
+                <separator/>
+                <filter
+                    name="invoice_plan_pending"
+                    string="With pending plans"
+                    domain="[('invoice_plan_pending','&gt;',0)]"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
