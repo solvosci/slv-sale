@@ -1,5 +1,6 @@
-Adds an extra group that enables to (un)lock sale orders without being
-Sales Administrator.
+Adds an extra group that allows you to (un)block sales orders and invoices without being
+Sales manager.
 
-Includes an extra feature: a new general setting enables initially unlock a
-Sale Order even if *Lock Confirmation Orders* setting is enabled.
+Includes an additional feature: a new general setting allows you to initially lock a
+Sales order when invoices are created.
+
