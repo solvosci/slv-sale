@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-01 09:56+0000\n"
-"PO-Revision-Date: 2022-04-01 09:56+0000\n"
+"POT-Creation-Date: 2023-03-06 10:06+0000\n"
+"PO-Revision-Date: 2023-03-06 10:06+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,45 +18,70 @@ msgstr ""
 #. module: sale_order_unlock_group
 #: model:res.groups,name:sale_order_unlock_group.group_sale_unlock
 msgid "Can (un)lock Sale Orders"
-msgstr "Puede (des)bloquear pedidos de ventas"
+msgstr "Puede (des)bloquear órdenes de venta"
 
 #. module: sale_order_unlock_group
 #: model:ir.model,name:sale_order_unlock_group.model_res_config_settings
 msgid "Config Settings"
-msgstr "Opciones de configuración"
+msgstr "Ajustes"
 
 #. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_account_move__display_name
 #: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:sale_order_unlock_group.field_sale_order__display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "Nombre a mostrar"
 
 #. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_account_move__id
 #: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__id
 #: model:ir.model.fields,field_description:sale_order_unlock_group.field_sale_order__id
 msgid "ID"
-msgstr "Id."
+msgstr "ID"
 
 #. module: sale_order_unlock_group
+#: model:ir.model,name:sale_order_unlock_group.model_account_move
+msgid "Journal Entry"
+msgstr "Producto de Entrada"
+
+#. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_account_move____last_update
 #: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:sale_order_unlock_group.field_sale_order____last_update
 msgid "Last Modified on"
-msgstr "Última modificación el"
+msgstr "Última modificación en"
 
 #. module: sale_order_unlock_group
-#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__group_auto_done_disable_setting
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__group_auto_done_disable_setting_invoice
+#: model:res.groups,name:sale_order_unlock_group.group_auto_done_disable_setting_invoice
+msgid "Lock Confirmed Sales- Automatically when invoiced"
+msgstr "Bloquear ventas confirmadas: bloquear automáticamente al facturar"
+
+#. module: sale_order_unlock_group
+#: model:ir.model.fields,field_description:sale_order_unlock_group.field_res_config_settings__group_auto_done_disable_setting_sale_order
 msgid "Lock Confirmed Sales- Make initially unlocked"
-msgstr "Bloquear pedidos confirmados - Inicialmente desbloqueados"
+msgstr "Bloquear ventas confirmadas: hacer inicialmente desbloqueado"
 
 #. module: sale_order_unlock_group
 #: model_terms:ir.ui.view,arch_db:sale_order_unlock_group.res_config_settings_view_form
 msgid "Orders can still be locked, but are initially unlocked once confirmed"
-msgstr "Los pedidos aún pueden ser bloqueados pero, una vez confirmados, nacen inicialmente desbloqueados"
+msgstr ""
+"Los pedidos aún se pueden bloquear, pero se desbloquean inicialmente una vez"
+" confirmados"
 
 #. module: sale_order_unlock_group
 #: model:res.groups,name:sale_order_unlock_group.group_auto_done_disable_setting
 msgid "Sale Orders Auto Done - Make initially unlocked"
 msgstr ""
+"Órdenes de venta hechas automáticamente: hacer inicialmente desbloqueado"
+
+#. module: sale_order_unlock_group
+#: model_terms:ir.ui.view,arch_db:sale_order_unlock_group.res_config_settings_view_form
+msgid ""
+"Sale order can still be unlocked, but are initially locked once invoiced"
+msgstr ""
+"El pedido de venta aún puede ser desbloqueado, pero se bloquea inicialmente "
+"cuando se factura"
 
 #. module: sale_order_unlock_group
 #: model:ir.model,name:sale_order_unlock_group.model_sale_order

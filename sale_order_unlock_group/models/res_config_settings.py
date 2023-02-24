@@ -7,12 +7,18 @@ from odoo import api, fields, models
 class ResConfigSettings(models.TransientModel):
     _inherit = "res.config.settings"
 
-    group_auto_done_disable_setting = fields.Boolean(
+    group_auto_done_disable_setting_sale_order = fields.Boolean(
         string="Lock Confirmed Sales- Make initially unlocked",
         implied_group='sale_order_unlock_group.group_auto_done_disable_setting',
+    )
+
+    group_auto_done_disable_setting_invoice = fields.Boolean(
+        string="Lock Confirmed Sales- Automatically when invoiced",
+        implied_group='sale_order_unlock_group.group_auto_done_disable_setting_invoice',
     )
 
     @api.onchange("group_auto_done_setting")
     def _onchange_group_auto_done_setting(self):
         if not self.group_auto_done_setting:
-            self.group_auto_done_disable_setting = False
+            self.group_auto_done_disable_setting_sale_order = False
+            self.group_auto_done_disable_setting_invoice = False

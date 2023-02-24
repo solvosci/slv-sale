@@ -5,23 +5,40 @@
         <field name="model">res.config.settings</field>
         <field name="inherit_id" ref="sale.res_config_settings_view_form" />
         <field name="arch" type="xml">
-            <div id="no_edit_order" position="after">
+            <xpath expr="//div[@id='no_edit_order']" position="after">
                 <div
                     class="col-12 col-lg-6 o_setting_box"
                     id="no_edit_order_disable"
                     attrs="{'invisible': [('group_auto_done_setting','=',False)]}"
                 >
                     <div class="o_setting_left_pane">
-                        <field name="group_auto_done_disable_setting"/>
+                        <field name="group_auto_done_disable_setting_sale_order"/>
                     </div>
+                    
                     <div class="o_setting_right_pane">
-                        <label for="group_auto_done_disable_setting"/>
+                        <label for="group_auto_done_disable_setting_sale_order"/>
                         <div class="text-muted">
                             Orders can still be locked, but are initially unlocked once confirmed
                         </div>
                     </div>
+                </div>
+                <div
+                    class="col-12 col-lg-6 o_setting_box"
+                    id="invoiced_order_lock"
+                    attrs="{'invisible': [('group_auto_done_setting','=',False)]}"
+                >
+                    <div class="o_setting_left_pane">
+                        <field name="group_auto_done_disable_setting_invoice"/>
+                    </div>
+                    
+                    <div class="o_setting_right_pane">
+                        <label for="group_auto_done_disable_setting_invoice" />
+                        <div class="text-muted">
+                            Sale order can still be unlocked, but are initially locked once invoiced
+                        </div> 
+                    </div>
                 </div>            
-            </div>
+            </xpath>
         </field>
     </record>
 </odoo>

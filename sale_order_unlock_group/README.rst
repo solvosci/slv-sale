@@ -19,11 +19,12 @@ Sale Order - (Un)lock extra group
 
 |badge1| |badge2| |badge3| 
 
-Adds an extra group that enables to (un)lock sale orders without being
-Sales Administrator.
+Adds an extra group that allows you to (un)block sales orders and invoices without being
+Sales manager.
 
-Includes an extra feature: a new general setting enables initially unlock a
-Sale Order even if *Lock Confirmation Orders* setting is enabled.
+Includes an additional feature: a new general setting allows you to initially unlock a
+Sales order and invoices created, even if the *Block Confirmation Orders* setting is enabled.
+
 
 **Table of contents**
 
@@ -69,6 +70,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * David Alonso <david.alonso@solvos.es>
+* Lucia Pinheiro <lucia.pinheiro@solvos.es>
 
 Maintainers
 ~~~~~~~~~~~
