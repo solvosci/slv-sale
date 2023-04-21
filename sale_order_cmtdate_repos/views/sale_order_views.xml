@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale_order_form (in sale_order_cmtdate_repos)</field>
+        <field name="model">sale.order</field>
+        <field name="priority" eval="999" />
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_shipping']" position="replace">
+            </xpath>
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <label for="commitment_date" string="Delivery Date"/>
+                <div name="commitment_date_div" class="o_row">
+                    <field name="commitment_date"/>
+                    <span name="expected_date_span" class="text-muted">Expected: <field name="expected_date" widget="date"/></span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
