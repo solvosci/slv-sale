@@ -43,6 +43,8 @@ class StockMoveLine(models.Model):
         currency_field="sale_currency_id",
         store=True,
     )
+    fcd_document_id = fields.Many2one(related='fcd_document_line_id.fcd_document_id')
+    fcd_document_line_id = fields.Many2one('fcd.document.line', compute='_compute_fcd_document_line_id', store=True)
 
     @api.depends(
         "product_uom_id",
@@ -81,6 +83,16 @@ class StockMoveLine(models.Model):
             "sale_price_kg": 0.0,
             "sale_margin": 0.0,
         })
+
+    @api.depends('lot_id.fcd_document_line_id', 'lot_id.fcd_origin_lot_id.fcd_document_line_id')
+    def _compute_fcd_document_line_id(self):
+        for record in self:
+            if record.lot_id.fcd_document_line_id:
+                record.fcd_document_line_id = record.lot_id.fcd_document_line_id
+            elif record.lot_id.fcd_origin_lot_id.fcd_document_line_id:
+                record.fcd_document_line_id = record.lot_id.fcd_origin_lot_id.fcd_document_line_id
+            else:
+                record.fcd_document_line_id = False
 
     @api.model
     def read_group(
