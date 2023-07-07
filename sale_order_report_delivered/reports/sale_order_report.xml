@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_saleorder_document_delivered"
+        inherit_id="sale.report_saleorder_document"
+        primary="True"
+    >
+        <xpath expr="//span[@t-field='doc.name']/.." position="before">
+            <t t-set="doc" t-value="doc.get_delivered_order()"/>
+        </xpath>
+        <xpath expr="//th[@name='th_quantity']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+        <xpath expr="//th[@name='th_quantity']" position="after">
+            <th name="th_quantity_delivered" class="text-right">Deliv. Qty</th>
+        </xpath>
+    </template>
+
+    <template id="report_saleorder_delivered">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="sale_order_report_delivered.report_saleorder_document_delivered"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+
+    <template id="report_saleorder_pro_forma_delivered">
+        <t t-call="web.html_container">
+            <t t-set="is_pro_forma" t-value="True"/>
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="sale_order_report_delivered.report_saleorder_document_delivered"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+</odoo>
