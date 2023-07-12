@@ -6,25 +6,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 08:02+0000\n"
-"PO-Revision-Date: 2023-07-05 10:04+0200\n"
+"POT-Creation-Date: 2023-07-21 07:13+0000\n"
+"PO-Revision-Date: 2023-07-21 07:13+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 3.1.1\n"
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,help:fcd_sale_order.field_sale_order_line__lot_location_id
 msgid ""
 "\n"
-"        When a lot is selected from Stock Quant wizard, this field is "
-"filled\n"
-"        with source location, that can be used in stock move line "
-"completion\n"
+"        When a lot is selected from Stock Quant wizard, this field is filled\n"
+"        with source location, that can be used in stock move line completion\n"
 "        process\n"
 "        "
 msgstr ""
@@ -38,6 +34,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__available_quantity
 msgid "Available Quantity"
 msgstr "Cantidad disponible"
+
+#. module: fcd_sale_order
+#: model_terms:ir.actions.act_window,help:fcd_sale_order.action_fcd_stock_move_traceability
+msgid "Can't create or update records in this view."
+msgstr "No se pueden crear ni actualizar registros en esta vista."
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__purchase_price
@@ -70,6 +71,12 @@ msgid "Currency"
 msgstr "Moneda"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__so_sml_qty_done
+msgid "Delivered Qty"
+msgstr "Cant. entregada"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__display_name
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__display_name
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order__display_name
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line__display_name
@@ -79,6 +86,7 @@ msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__fcd_document_id
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__fcd_document_id
 msgid "Fcd Document"
 msgstr "Lote de proveedor"
@@ -94,6 +102,12 @@ msgid "Fcd Origin Lot"
 msgstr "Lote original FCD"
 
 #. module: fcd_sale_order
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__id
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__id
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order__id
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line__id
@@ -113,6 +127,7 @@ msgid "Inventoried Quantity"
 msgstr "Cantidad a mano"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability____last_update
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard____last_update
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order____last_update
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line____last_update
@@ -137,6 +152,12 @@ msgid "Location"
 msgstr "Ubicación"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__lot_id
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+msgid "Lot"
+msgstr "Lote"
+
+#. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line__lot_location_id
 msgid "Lot Location"
 msgstr ""
@@ -150,6 +171,11 @@ msgstr "Lote/Nº de serie"
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_margin
 msgid "Margin"
 msgstr "Margen"
+
+#. module: fcd_sale_order
+#: model_terms:ir.actions.act_window,help:fcd_sale_order.action_fcd_stock_move_traceability
+msgid "Not possible."
+msgstr "No es posible."
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,help:fcd_sale_order.field_fcd_stock_quant_wizard__available_quantity
@@ -172,8 +198,8 @@ msgid ""
 "Optional address where goods are to be delivered, specifically used for "
 "allotment"
 msgstr ""
-"Dirección opcional donde se entregarán los bienes, específicamente "
-"utilizada para la asignación"
+"Dirección opcional donde se entregarán los bienes, específicamente utilizada"
+" para la asignación"
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_date_order
@@ -186,9 +212,41 @@ msgid "Partner"
 msgstr "Contacto"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__po_partner_id
+msgid "Po Partner"
+msgstr "Proveedor"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__po_qty_done
+msgid "Po Qty Done"
+msgstr "Compra Cant. Pedido"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: fcd_sale_order
 #: model:ir.model,name:fcd_sale_order.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
 msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__po_date_done
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+msgid "Purchase Date"
+msgstr "Fecha de compra"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__po_sp_id
+msgid "Purchase Delivery Note"
+msgstr "Albarán compra"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__purchase_order_id
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+msgid "Purchase Order"
+msgstr "Pedido de compra"
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__fcd_purchase_price_kg
@@ -206,14 +264,21 @@ msgid "Quant in 2nd unit"
 msgstr ""
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__po_sml_qty_done
+msgid "Received Qty"
+msgstr "Cant. recibida"
+
+#. module: fcd_sale_order
 #: model_terms:ir.ui.view,arch_db:fcd_sale_order.view_sale_order_form_inherit
 msgid "Remove selected lot"
 msgstr ""
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__so_date_done
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
 #: model_terms:ir.ui.view,arch_db:fcd_sale_order.stock_move_line_sale_view_search
 msgid "Sale Date"
-msgstr "Fecha Venta"
+msgstr "Fecha de venta"
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__sale_line_id
@@ -221,9 +286,20 @@ msgid "Sale Line"
 msgstr "Línea venta"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__sale_order_id
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_price_kg
 msgid "Sale Price (kg)"
 msgstr "Precio kg venta"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__so_sp_id
+msgid "Sales Delivery Note"
+msgstr "Albarán venta"
 
 #. module: fcd_sale_order
 #: model:ir.actions.act_window,name:fcd_sale_order.action_stock_move_line_sale_pivot
@@ -243,14 +319,42 @@ msgid "Sales Order Line"
 msgstr "Línea de pedido de venta"
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__so_partner_id
+msgid "So Partner"
+msgstr "Cliente"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_move_traceability__so_qty_done
+msgid "So Qty Done"
+msgstr "Venta Cant. Pedido"
+
+#. module: fcd_sale_order
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+msgid "Sold Last Month"
+msgstr "Vendido el último mes"
+
+#. module: fcd_sale_order
 #: model:ir.model,name:fcd_sale_order.model_stock_move
 msgid "Stock Move"
 msgstr "Movimiento Inventario"
 
 #. module: fcd_sale_order
+#: model:ir.model,name:fcd_sale_order.model_fcd_stock_move_traceability
+msgid "Stock Move FCD Traceability"
+msgstr ""
+
+#. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__stock_move_line_id
 msgid "Stock Move Line"
 msgstr "Línea de pedido de venta"
+
+#. module: fcd_sale_order
+#: model:ir.actions.act_window,name:fcd_sale_order.action_fcd_stock_move_traceability
+#: model:ir.ui.menu,name:fcd_sale_order.fcd_stock_move_traceability
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_search
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order.fcd_stock_move_traceability_tree
+msgid "Stock Move Traceability"
+msgstr "Trazabilidad de movimientos"
 
 #. module: fcd_sale_order
 #: code:addons/fcd_sale_order/models/sale_order_line.py:0

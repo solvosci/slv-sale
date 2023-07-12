@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_fcd_stock_quant_user,fcd.stock.quant user,fcd_sale_order.model_fcd_stock_quant_wizard,fcd.group_fcd_user,1,1,1,1
+access_fcd_stock_move_traceability_user,fcd.stock.move.traceability user,fcd_sale_order.model_fcd_stock_move_traceability,fcd.group_fcd_user,1,0,0,0
