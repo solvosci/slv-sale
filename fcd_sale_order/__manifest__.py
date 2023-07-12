@@ -7,7 +7,7 @@
     """,
     "author": "Solvos",
     "license": "AGPL-3",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.2.0",
     "category": "Sale",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": [
@@ -20,6 +20,8 @@
     ],
     "data": [
         "report/sale_report_templates.xml",
+        "report/stock_move_traceability_menuitem.xml",
+        "report/stock_move_traceability_views.xml",
         "security/fcd_sale_order_security.xml",
         "security/ir.model.access.csv",
         "views/sale_order_line_views.xml",
