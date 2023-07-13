@@ -12,7 +12,8 @@
     "website": "https://github.com/solvosci/slv-sale",
     "depends": ["sale"],
     "data": [
-        "reports/sale_order_report.xml"
+        "reports/sale_order_report.xml",
+        "views/res_config_settings.xml"
     ],
     'installable': True,
 }

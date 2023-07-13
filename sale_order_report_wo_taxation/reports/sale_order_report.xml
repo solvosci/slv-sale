@@ -14,30 +14,32 @@
             expr="//t[@t-call='account.document_tax_totals']"
             position="attributes"
         >
-            <attribute name="t-if">False</attribute>
+            <attribute name="t-if">doc.company_id.sale_standard_total_taxes</attribute>
         </xpath>
         <xpath
             expr="//t[@t-call='account.document_tax_totals']"
             position="after"
         >
-            <tr 
-                class="border-black o_total"
-                style="font-size: 1.5em"
-            >
-                <td><strong>Total</strong></td>
-                <td class="text-right">
-                    <span t-field="doc.amount_untaxed" />
-                </td>
-            </tr>
-            <tr class="border-black">
-                <td
-                    class="text-right"
-                    colspan="2"
-                    style="font-size: 0.8em"
+            <t t-if="not doc.company_id.sale_standard_total_taxes">
+                <tr
+                    class="border-black o_total"
+                    style="font-size: 1.5em"
                 >
-                    No taxes included
-                </td>
-            </tr>
+                    <td><strong>Total</strong></td>
+                    <td class="text-right">
+                        <span t-field="doc.amount_untaxed" />
+                    </td>
+                </tr>
+                <tr class="border-black">
+                    <td
+                        class="text-right"
+                        colspan="2"
+                        style="font-size: 0.8em"
+                    >
+                        No taxes included
+                    </td>
+                </tr>
+            </t>
         </xpath>
     </template>
 </odoo>
