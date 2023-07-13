@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_report_wo_taxation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-13 08:08+0000\n"
+"PO-Revision-Date: 2023-07-13 08:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_report_wo_taxation
+#: model_terms:ir.ui.view,arch_db:sale_order_report_wo_taxation.report_saleorder_document_without_taxation
+msgid "<strong>Total</strong>"
+msgstr ""
+
+#. module: sale_order_report_wo_taxation
+#: model_terms:ir.ui.view,arch_db:sale_order_report_wo_taxation.res_config_settings_view_form_sale_order_report_wo_taxation
+msgid "Change the report subtotal as standard"
+msgstr ""
+
+#. module: sale_order_report_wo_taxation
+#: model:ir.model,name:sale_order_report_wo_taxation.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: sale_order_report_wo_taxation
+#: model:ir.model,name:sale_order_report_wo_taxation.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sale_order_report_wo_taxation
+#: model_terms:ir.ui.view,arch_db:sale_order_report_wo_taxation.report_saleorder_document_without_taxation
+msgid "No taxes included"
+msgstr ""
+
+#. module: sale_order_report_wo_taxation
+#: model:ir.model.fields,field_description:sale_order_report_wo_taxation.field_res_company__sale_standard_total_taxes
+#: model:ir.model.fields,field_description:sale_order_report_wo_taxation.field_res_config_settings__sale_standard_total_taxes
+msgid "Standard Subtotal Taxes"
+msgstr ""

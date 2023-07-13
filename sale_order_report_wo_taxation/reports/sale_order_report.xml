@@ -11,10 +11,23 @@
             <attribute name="class">d-none</attribute>
         </xpath>
         <xpath expr="//t[@t-as='amount_by_group']//tr" position="attributes">
-            <attribute name="class">d-none</attribute>
+            <attribute name="t-if">doc.company_id.sale_standard_total_taxes</attribute>
         </xpath>
         <xpath expr="//td[@name='td_amount_total_label']/parent::tr" position="attributes">
-            <attribute name="class">d-none</attribute>
+            <attribute name="t-if">doc.company_id.sale_standard_total_taxes</attribute>
+        </xpath>
+        <xpath expr="//td[@name='td_amount_total_label']/parent::tr" position="after">
+            <t t-if="not doc.company_id.sale_standard_total_taxes">
+                <tr class="border-black">
+                    <td
+                        class="text-right"
+                        colspan="2"
+                        style="font-size: 0.8em"
+                    >
+                        No taxes included
+                    </td>
+                </tr>
+            </t>
         </xpath>
     </template>
 </odoo>
