@@ -20,6 +20,8 @@ Sale Order Report Without Taxation
 |badge1| |badge2| |badge3| 
 
 Hides taxes data in sale order report.
+Adds new field in res.config.settings by default False to not show taxes in the subtotal section,
+if the subtotal section is activated it leaves it as the default.
 
 **Table of contents**
 
@@ -48,6 +50,7 @@ Contributors
 ~~~~~~~~~~~~
 
 * David Alonso <david.alonso@solvos.es>
+* Christian Santamaría <christian.santamaria@solvos.es>
 
 Maintainers
 ~~~~~~~~~~~

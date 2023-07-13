@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_sale_order_report_wo_taxation" model="ir.ui.view" >
+            <field name="name">res.config.settings.weight.scale.inherited</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='proforma_configuration']" position="after">
+                    <div class="col-12 col-lg-6 o_setting_box" id="no_edit_order">
+                        <div class="o_setting_left_pane">
+                            <field name="sale_standard_total_taxes"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="sale_standard_total_taxes"/>
+                            <div class="text-muted">
+                                Change the report subtotal as standard
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
