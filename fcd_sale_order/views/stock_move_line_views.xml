@@ -77,17 +77,16 @@
         <field name="groups_id" eval="[(4, ref('sales_team.group_sale_manager'))]" />
         <field name="arch" type="xml">
             <pivot string="Sales Margin by Move">
-                <field name="partner_id" type="row"/>
+                <!-- field name="partner_id" type="row"/ -->
                 <field name="product_id" type="row"/>
-                <field name="lot_id" type="row"/>
-                <field name="fcd_origin_lot_id" type="row"/>
+                <!-- field name="lot_id" type="row"/ -->
+                <!-- field name="fcd_origin_lot_id" type="row"/ -->
                 <field name="sale_date_order" interval="day" type="col"/>
                 <field name="qty_done" type="measure" string="Qty"/>
                 <field name="fcd_purchase_price_kg" type="measure"/>
                 <field name="sale_price_kg" type="measure"/>
                 <!-- TODO monetary widget doesn't work -->
-                <field name="sale_margin" type="measure" widget="monetary"/>
-            </pivot>
+                <field name="sale_margin" type="measure" widget="monetary"/>            </pivot>
         </field>
     </record>
     <!-- Product moves -->
