@@ -1,0 +1,154 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fcd_sale_order_rpt_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-11 10:37+0000\n"
+"PO-Revision-Date: 2023-09-11 12:46+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model_terms:ir.actions.act_window,help:fcd_sale_order_rpt_invoice.action_fcd_sale_report_invoice
+msgid "Can't create or update records in this view."
+msgstr "No se pueden crear ni actualizar registros en esta vista."
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__date_order
+msgid "Date Order"
+msgstr "Fecha de venta"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__fcd_purchase_price_kg
+msgid "Fcd Purchase Price Kg"
+msgstr "Precio Real"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__id
+msgid "ID"
+msgstr "ID"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
+msgid "Invoiced Last Month"
+msgstr "Facturado Último Mes"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__lot_id
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
+msgid "Lot"
+msgstr "Lote"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_net
+msgid "Margin Net"
+msgstr "Neto"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_net_invoiced
+msgid "Margin Net Invoiced"
+msgstr "Neto Facturado"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_pct
+msgid "Margin Pct"
+msgstr "Margen"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_pct_invoiced
+msgid "Margin Pct Invoiced"
+msgstr "Margen Facturado"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model_terms:ir.actions.act_window,help:fcd_sale_order_rpt_invoice.action_fcd_sale_report_invoice
+msgid "Not possible."
+msgstr "No es posible."
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__origin_warehouse_id
+msgid "Origin Warehouse"
+msgstr "Almacén de origen"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__po_partner_id
+msgid "Po Partner"
+msgstr "Proveedor"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__product_id
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
+msgid "Product"
+msgstr "Producto"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
+msgid "Sale Date"
+msgstr "Fecha de venta"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__sale_price_kg
+msgid "Sale Price Kg"
+msgstr "Precio Unitario"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.actions.act_window,name:fcd_sale_order_rpt_invoice.action_fcd_sale_report_invoice
+#: model:ir.model,name:fcd_sale_order_rpt_invoice.model_fcd_sale_report_invoice
+#: model:ir.ui.menu,name:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
+#: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_tree
+msgid "Sales Margin per Operation"
+msgstr "Margen de ventas por operación"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__smls_amount_base
+msgid "Smls Amount Base"
+msgstr "Base Imponible"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__smls_price_subtotal
+msgid "Smls Price Subtotal"
+msgstr "Subtotal Facturado"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__smls_qty_invoiced
+msgid "Smls Qty Invoiced"
+msgstr "Cant. Facturada"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__so_partner_id
+msgid "So Partner"
+msgstr "Cliente"
+
+#. module: fcd_sale_order_rpt_invoice
+#: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__so_sml_qty_done
+msgid "So Sml Qty Done"
+msgstr "Cant. Entregada"
