@@ -19,7 +19,6 @@
         name="Sales &amp; Invoice Margin per Operation"
         action="action_fcd_sale_report_invoice"
         parent="sale.menu_sale_report"
-        groups="sales_team.group_sale_salesman"
         sequence="40"/>
 
 </odoo>

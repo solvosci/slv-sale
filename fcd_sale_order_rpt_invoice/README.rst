@@ -19,7 +19,7 @@ FCD Sale Order Report Invoice
 
 |badge1| |badge2| |badge3| 
 
-Adds new view to sales sargin per operation
+Adds new view to sales & invoice margin per operation
 
 **Table of contents**
 

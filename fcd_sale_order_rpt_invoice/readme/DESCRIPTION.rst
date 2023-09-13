@@ -1,1 +1,1 @@
-Adds new view to sales sargin per operation
+Adds new view to sales & invoice margin per operation

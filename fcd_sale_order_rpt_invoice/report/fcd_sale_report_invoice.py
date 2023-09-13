@@ -100,7 +100,7 @@ class FcdSaleReportInvoice(models.Model):
                     0.0
                 ) margin_pct_invoiced,/**/
                 sol.currency_id currency_id,
-                sol.company_id company_id
+                smls.company_id company_id
             FROM
                 stock_move_line smls
             INNER JOIN
