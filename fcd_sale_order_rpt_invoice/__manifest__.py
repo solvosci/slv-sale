@@ -3,7 +3,7 @@
 {
     "name": "FCD Sale Order Report Invoice",
     "summary": """
-
+        Adds new view to sales & invoice margin per operation
     """,
     "author": "Solvos",
     "license": "AGPL-3",
@@ -15,9 +15,10 @@
         "stock_picking_invoice_link"
     ],
     "data": [
+        "security/ir.model.access.csv",
+        "security/fcd_sale_order_rpt_invoice_security.xml",
         "report/fcd_sale_report_invoice_menuitem.xml",
         "report/fcd_sale_report_invoice_views.xml",
-        "security/ir.model.access.csv",
     ],
     'installable': True,
 }

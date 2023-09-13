@@ -7,7 +7,7 @@ from psycopg2.extensions import AsIs
 
 class FcdSaleReportInvoice(models.Model):
     _name = "fcd.sale.report.invoice"
-    _description = "Sales Margin per Operation"
+    _description = "Sales & Invoice Margin per Operation"
     _auto = False
 
     date_order = fields.Datetime(readonly=True)
@@ -27,6 +27,7 @@ class FcdSaleReportInvoice(models.Model):
     margin_pct = fields.Monetary(digits="Product Unit of Measure", readonly=True)
     margin_pct_invoiced = fields.Float(digits="Product Unit of Measure", readonly=True)
     currency_id = fields.Many2one('res.currency', readonly=True)
+    company_id = fields.Many2one('res.company', readonly=True)
 
     def init(self):
         query = """
@@ -77,7 +78,7 @@ class FcdSaleReportInvoice(models.Model):
                 -- => lo hacemos solo con precios, CONFIRMAR
                 case
                     when fcd_purchase_price_kg > 0.0
-                    then 100*((smls.sale_price_kg/smls.fcd_purchase_price_kg) - 1)
+                    then (smls.sale_price_kg/smls.fcd_purchase_price_kg) - 1
                     else 0.0
                 end margin_pct,
                 -- Margen facturado (%)
@@ -86,7 +87,7 @@ class FcdSaleReportInvoice(models.Model):
                 --    factura con importes distintos
                 /**/coalesce(
                     (select
-                        100*((sum(V.quantity*V.price_mrg)/sum(V.quantity)) - 1)
+                        (sum(V.quantity*V.price_mrg)/sum(V.quantity)) - 1
                     from
                         (select
                             aml.quantity,
@@ -98,7 +99,8 @@ class FcdSaleReportInvoice(models.Model):
                     ),
                     0.0
                 ) margin_pct_invoiced,/**/
-                sol.currency_id currency_id
+                sol.currency_id currency_id,
+                sol.company_id company_id
             FROM
                 stock_move_line smls
             INNER JOIN
