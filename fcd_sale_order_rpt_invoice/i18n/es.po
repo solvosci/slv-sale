@@ -81,7 +81,7 @@ msgstr "Neto"
 #. module: fcd_sale_order_rpt_invoice
 #: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_net_invoiced
 msgid "Margin Net Invoiced"
-msgstr "Neto Facturado"
+msgstr "Facturado"
 
 #. module: fcd_sale_order_rpt_invoice
 #: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_pct
@@ -91,7 +91,7 @@ msgstr "Margen"
 #. module: fcd_sale_order_rpt_invoice
 #: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__margin_pct_invoiced
 msgid "Margin Pct Invoiced"
-msgstr "Margen Facturado"
+msgstr "Facturado"
 
 #. module: fcd_sale_order_rpt_invoice
 #: model_terms:ir.actions.act_window,help:fcd_sale_order_rpt_invoice.action_fcd_sale_report_invoice
@@ -101,7 +101,7 @@ msgstr "No es posible."
 #. module: fcd_sale_order_rpt_invoice
 #: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__origin_warehouse_id
 msgid "Origin Warehouse"
-msgstr "Almacén de origen"
+msgstr "Almacén origen"
 
 #. module: fcd_sale_order_rpt_invoice
 #: model_terms:ir.ui.view,arch_db:fcd_sale_order_rpt_invoice.fcd_sale_report_invoice_search
@@ -151,7 +151,7 @@ msgstr "Subtotal Facturado"
 #. module: fcd_sale_order_rpt_invoice
 #: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__smls_qty_invoiced
 msgid "Smls Qty Invoiced"
-msgstr "Cant. Facturada"
+msgstr "Facturada"
 
 #. module: fcd_sale_order_rpt_invoice
 #: model:ir.model.fields,field_description:fcd_sale_order_rpt_invoice.field_fcd_sale_report_invoice__so_partner_id
