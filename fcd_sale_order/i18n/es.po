@@ -6,21 +6,35 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 07:13+0000\n"
-"PO-Revision-Date: 2023-07-21 07:13+0000\n"
+"POT-Creation-Date: 2023-09-28 07:25+0000\n"
+"PO-Revision-Date: 2023-09-28 09:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.1.1\n"
+
+#. module: fcd_sale_order
+#: model:ir.model.fields,help:fcd_sale_order.field_sale_order_line__lot_product_unique
+msgid ""
+"\n"
+"        Technical field to help sales order imports select the correct lot\n"
+"        using the lot name and product id in this format 'LOT00001 - "
+"12345'\n"
+"        "
+msgstr ""
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,help:fcd_sale_order.field_sale_order_line__lot_location_id
 msgid ""
 "\n"
-"        When a lot is selected from Stock Quant wizard, this field is filled\n"
-"        with source location, that can be used in stock move line completion\n"
+"        When a lot is selected from Stock Quant wizard, this field is "
+"filled\n"
+"        with source location, that can be used in stock move line "
+"completion\n"
 "        process\n"
 "        "
 msgstr ""
@@ -114,7 +128,7 @@ msgstr "Agrupar por"
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move__id
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__id
 msgid "ID"
-msgstr "Id."
+msgstr "Identificación"
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order__fcd_import
@@ -163,6 +177,17 @@ msgid "Lot Location"
 msgstr ""
 
 #. module: fcd_sale_order
+#: model:ir.model.fields,field_description:fcd_sale_order.field_sale_order_line__lot_product_unique
+msgid "Lot Product Unique"
+msgstr "Lote Producto Único"
+
+#. module: fcd_sale_order
+#: code:addons/fcd_sale_order/models/sale_order_line.py:0
+#, python-format
+msgid "Lot not found for: {}"
+msgstr "Lote no encontrado para: {}"
+
+#. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__lot_id
 msgid "Lot/Serial Number"
 msgstr "Lote/Nº de serie"
@@ -198,8 +223,8 @@ msgid ""
 "Optional address where goods are to be delivered, specifically used for "
 "allotment"
 msgstr ""
-"Dirección opcional donde se entregarán los bienes, específicamente utilizada"
-" para la asignación"
+"Dirección opcional donde se entregarán los bienes, específicamente "
+"utilizada para la asignación"
 
 #. module: fcd_sale_order
 #: model:ir.model.fields,field_description:fcd_sale_order.field_stock_move_line__sale_date_order
@@ -368,6 +393,12 @@ msgstr "Stock a mano"
 #: model:ir.model.fields,field_description:fcd_sale_order.field_fcd_stock_quant_wizard__value
 msgid "Value"
 msgstr "Valor"
+
+#. module: fcd_sale_order
+#: code:addons/fcd_sale_order/models/sale_order_line.py:0
+#, python-format
+msgid "Wrong format for: {}, should be like: 'LOT00001 - 12345'"
+msgstr "Formato incorrecto para: {}, debería ser como: 'LOT00001 - 12345'"
 
 #. module: fcd_sale_order
 #: model:ir.model,name:fcd_sale_order.model_fcd_stock_quant_wizard
