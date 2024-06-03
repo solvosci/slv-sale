@@ -70,11 +70,13 @@ class SaleOrder(models.Model):
                 line.product_uom_qty = import_qty
                 line.lot_id = line.lot_id.search([('name', '=', line.lot_id.name), ('product_id', '=', line.product_id.id)])
 
-    def action_sale_order_confirm_multi(self):
-        super(SaleOrder, self).action_sale_order_confirm_multi()
-        for picking_id in self.browse(self.env.context['active_ids']).filtered(lambda x: x.state == 'sale').picking_ids.filtered(lambda x: x.state in ('draft', 'waiting', 'confirmed', 'assigned')):
-            for move_id in picking_id.move_ids_without_package:
-                move_id.action_complete_stock_move_line()
-            picking_id.action_confirm()
-            picking_id.action_assign()
-            picking_id._action_done()
+    def action_confirm_order_and_validate_picking(self):
+        for order_id in self.browse(self.env.context['active_ids']).filtered(lambda x: x.state in ('draft', 'sent')):
+            order_id.action_confirm()
+            
+            for picking_id in order_id.picking_ids.filtered(lambda x: x.state in ('draft', 'waiting', 'confirmed', 'assigned')):
+                for move_id in picking_id.move_ids_without_package:
+                    move_id.action_complete_stock_move_line()
+                picking_id.action_confirm()
+                picking_id.action_assign()
+                picking_id._action_done()
