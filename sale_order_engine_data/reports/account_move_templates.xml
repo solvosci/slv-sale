@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template
+        id="report_invoice_document"
+        inherit_id="account.report_invoice_document"
+    >
+        <xpath expr="//div[@name='reference']" position="after">
+            <t t-set="so_ids" t-value="o.invoice_line_ids.sudo().sale_line_ids.order_id" />
+            <t
+                t-set="so_engine_refs"
+                t-value="', '.join(so_ids.filtered(lambda x: x.engine_ref).mapped('engine_ref'))"
+            />
+            <div
+                class="col-auto col-3 mw-100 mb-2"
+                t-if="so_ids and (so_engine_refs or any(so_ids.mapped('engine_hours')))"
+                name="engine_data"
+            >
+                <t
+                    t-set="so_engine_hours"
+                    t-value="', '.join(str(hour) for hour in so_ids.mapped('engine_hours'))"
+                />
+                <span t-if="so_engine_refs" style="display: block">
+                    <strong>Engine number:</strong>
+                    <p class="m-0" style="display: inline-block" t-esc="so_engine_refs"/>
+                </span>
+                <span t-if="so_engine_refs" style="display: block">
+                    <strong>Engine hours:</strong>
+                    <p class="m-0" style="display: inline-block" t-esc="so_engine_hours"/>
+                </span>
+            </div>        
+        </xpath>
+    </template>
+</odoo>
