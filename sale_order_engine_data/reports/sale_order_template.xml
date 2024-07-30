@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_saleorder_document_engine_data" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='expiration_date']" position="after">
+            <div t-if="doc.engine_ref or doc.engine_hours" class="col-auto col-3 mw-100 mb-2" name="engine_data">
+                <span t-if="doc.engine_ref" style="display: block">
+                    <strong>Engine number:</strong>
+                    <p class="m-0" style="display: inline-block" t-field="doc.engine_ref"/>
+                </span>
+                <span t-if="doc.engine_hours" style="display: block">
+                    <strong>Engine hours:</strong>
+                    <p class="m-0" style="display: inline-block" t-field="doc.engine_hours"/>
+                </span>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

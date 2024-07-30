@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_order_engine_data_form_view" model="ir.ui.view">
+        <field name="name">sale.order.engine.data.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='customer_signature']" position="after">
+                <page name="engine_data" string="Engine data">
+                    <group>
+                        <group>
+                            <field name="engine_ref" attrs="{'readonly':[('state','in',['done','cancel'])]}"/>
+                        </group>
+                        <group>
+                            <field name="engine_hours" attrs="{'readonly':[('state','in',['done','cancel'])]}"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+        
+    </record>
+
+    <record id="sale_order_engine_data_search_view" model="ir.ui.view">
+        <field name="name">sale.order.engine.data.search</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='campaign_id']" position="after">
+                <field name="engine_ref" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_sales_order_filter" model="ir.ui.view">
+        <field name="name">sale.order.list.select (in sale_order_engine_data)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='analytic_account_id']" position="after">
+                <field name="engine_ref" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_engine_data_tree_view" model="ir.ui.view">
+        <field name="name">sale.order.engine.data.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="engine_ref" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_engine_data_inherit_tree_view" model="ir.ui.view">
+        <field name="name">sale.order.engine.data.inherit.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="engine_ref" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
