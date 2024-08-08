@@ -1,0 +1,24 @@
+# © 2023 Solvos Consultoría Informática (<http://www.solvos.es>)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+{
+    "name": "FCD Sale Order Report Invoice",
+    "summary": """
+        Adds new view to sales & invoice margin per operation
+    """,
+    "author": "Solvos",
+    "license": "AGPL-3",
+    "version": "14.0.1.0.0",
+    "category": "Sale",
+    "website": "https://github.com/solvosci/slv-sale",
+    "depends": [
+        "fcd_sale_order",
+        "stock_picking_invoice_link"
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        "security/fcd_sale_order_rpt_invoice_security.xml",
+        "report/fcd_sale_report_invoice_menuitem.xml",
+        "report/fcd_sale_report_invoice_views.xml",
+    ],
+    'installable': True,
+}
