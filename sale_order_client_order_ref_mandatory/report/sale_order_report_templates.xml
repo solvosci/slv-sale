@@ -9,7 +9,7 @@
             </h3>
         </xpath>
         <xpath
-            expr="//p[@t-field='doc.client_order_ref']/parent::div"
+            expr="//span[@t-field='doc.client_order_ref']/parent::div"
             position="attributes"
         > 
             <attribute name="t-if">False</attribute>
