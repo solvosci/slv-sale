@@ -10,7 +10,12 @@
             </xpath>
             <xpath expr="//group[@name='sale_header']" position="before">
                 <group class="mt-0" colspan="2">
-                    <field name="client_order_ref" required="1" nolabel="1" colspan="2" style="width: 100%; font-size: 1.5em; font-weight: bold" />                
+                    <field name="client_order_ref" 
+                    required="1" 
+                    nolabel="1" 
+                    colspan="2" 
+                    style="width: 100%; font-size: 1.5em; font-weight: bold" 
+                    placeholder="Enter the customer reference here"/>                
                 </group>
             </xpath>
         </field>
