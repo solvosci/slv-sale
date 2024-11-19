@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_order_partner_invoice_period)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="partner_invoice_period"/>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <record id="view_sales_order_filter" model="ir.ui.view">
+        <field name="name">sale.order.list.select (in sale_order_partner_invoice_period)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search//filter[@name='order_month']" position="after">
+                <filter name="partner_invoice_period" domain="[]" context="{'group_by': 'partner_invoice_period'}"/>
+            </xpath>
+            
+        </field>
+    </record>
+
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree (in sale_order_partner_invoice_period)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_status']" position="after">
+                <field name="partner_invoice_period" widget="badge" optional="hide"
+                decoration-success="partner_invoice_period == 'daily'"
+                decoration-primary="partner_invoice_period == 'weekly'"
+                decoration-info="partner_invoice_period == 'fortnightly'"
+                decoration-warning="partner_invoice_period == 'monthly'"
+                decoration-danger="partner_invoice_period == 'quarterly'"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
