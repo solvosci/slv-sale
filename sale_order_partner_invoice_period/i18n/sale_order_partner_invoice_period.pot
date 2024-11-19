@@ -1,0 +1,109 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_partner_invoice_period
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-22 15:11+0000\n"
+"PO-Revision-Date: 2025-10-22 15:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model,name:sale_order_partner_invoice_period.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model,name:sale_order_partner_invoice_period.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model,name:sale_order_partner_invoice_period.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__daily
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__daily
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__daily
+msgid "Daily"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__fortnightly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__fortnightly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__fortnightly
+msgid "Fortnightly"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields,field_description:sale_order_partner_invoice_period.field_res_partner__invoice_period
+#: model:ir.model.fields,field_description:sale_order_partner_invoice_period.field_res_users__invoice_period
+#: model:ir.model.fields,field_description:sale_order_partner_invoice_period.field_sale_order__partner_invoice_period
+msgid "Invoice Period"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields,field_description:sale_order_partner_invoice_period.field_res_company__invoice_period_default
+#: model:ir.model.fields,field_description:sale_order_partner_invoice_period.field_res_config_settings__invoice_period_default
+msgid "Invoice Period Default"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__monthly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__monthly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__quarterly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__quarterly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__quarterly
+msgid "Quarterly"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model,name:sale_order_partner_invoice_period.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields,help:sale_order_partner_invoice_period.field_res_config_settings__invoice_period_default
+#: model_terms:ir.ui.view,arch_db:sale_order_partner_invoice_period.res_config_settings_view_form
+msgid ""
+"Select default invoice period for new partners (Companies or Contacts)."
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#. odoo-python
+#: code:addons/sale_order_partner_invoice_period/models/res_partner.py:0
+#: code:addons/slv-sale/sale_order_partner_invoice_period/models/res_partner.py:0
+#, python-format
+msgid ""
+"There is no default invoice period set.\n"
+"Add an invoice period on partner or set one by default on:\n"
+"Configuration > Sales > Accounting."
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__weekly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__weekly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__weekly
+msgid "Weekly"
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__yearly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__yearly
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__yearly
+msgid "Yearly"
+msgstr ""
