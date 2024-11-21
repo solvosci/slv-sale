@@ -6,7 +6,7 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='payment_term_id']" position="after">
+            <xpath expr="//group[@name='sale_info']//field[@name='invoice_status']" position="after">
                 <field name="partner_invoice_period"/>
             </xpath>
             
@@ -19,7 +19,7 @@
         <field name="inherit_id" ref="sale.view_sales_order_filter"/>
         <field name="arch" type="xml">
             <xpath expr="//search//filter[@name='order_month']" position="after">
-                <filter name="partner_invoice_period" domain="[]" context="{'group_by': 'partner_invoice_period'}"/>
+                <field name="partner_invoice_period"/>
             </xpath>
             
         </field>
