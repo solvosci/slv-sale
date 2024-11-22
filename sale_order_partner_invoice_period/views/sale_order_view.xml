@@ -18,8 +18,11 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_sales_order_filter"/>
         <field name="arch" type="xml">
-            <xpath expr="//search//filter[@name='order_month']" position="after">
+            <xpath expr="//field[@name='analytic_account_id']" position="after">
                 <field name="partner_invoice_period"/>
+            </xpath>
+            <xpath expr="//filter[@name='order_month']" position="after">
+                <filter name="partner_invoice_period" context="{'group_by': 'partner_invoice_period'}"/>
             </xpath>
             
         </field>

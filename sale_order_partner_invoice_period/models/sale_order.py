@@ -1,19 +1,13 @@
 # © 2024 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 from odoo import models, fields, api
+from .res_partner import INVOICE_PERIOD_SELECTION
 
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     partner_invoice_period = fields.Selection(
-        selection=[
-            ('daily', 'Daily'),
-            ('weekly', 'Weekly'),
-            ('fortnightly', 'Fortnightly'),
-            ('monthly', 'Monthly'),
-            ('quarterly', 'Quarterly'),
-            ('yearly', 'Yearly'),
-        ],
+        selection=INVOICE_PERIOD_SELECTION,
         compute='_compute_partner_invoice_period',
         string="Invoice Period",
         store=True
