@@ -34,12 +34,7 @@
         <field name="inherit_id" ref="sale.view_order_tree"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='invoice_status']" position="after">
-                <field name="partner_invoice_period" widget="badge" optional="hide"
-                decoration-success="partner_invoice_period == 'daily'"
-                decoration-primary="partner_invoice_period == 'weekly'"
-                decoration-info="partner_invoice_period == 'fortnightly'"
-                decoration-warning="partner_invoice_period == 'monthly'"
-                decoration-danger="partner_invoice_period == 'quarterly'"/>
+                <field name="partner_invoice_period" widget="badge" optional="hide"/>
             </xpath>
         </field>
     </record>
