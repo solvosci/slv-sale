@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">
+            res.config.settings.view.form.inherit.sale (in sale_order_partner_invoice_period)
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="20"/>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='automatic_invoicing']" position="after">
+                <setting id="default_invoice_period" help="Select default invoice period for new companys">
+                    <field name="invoice_period_default"/>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

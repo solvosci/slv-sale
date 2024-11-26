@@ -16,14 +16,9 @@ class SaleOrder(models.Model):
     @api.depends('partner_invoice_id.invoice_period', 'partner_invoice_id.parent_id.invoice_period')
     def _compute_partner_invoice_period(self):
         for order in self:
-            if order.partner_invoice_id:
-                if order.partner_invoice_id.invoice_period:
-                    order.partner_invoice_period = order.partner_invoice_id.invoice_period
-                elif (
-                    order.partner_invoice_id.parent_id
-                    and order.partner_invoice_id.parent_id.invoice_period):
-                    order.partner_invoice_period = order.partner_invoice_id.parent_id.invoice_period
-                else:
-                    order.partner_invoice_period = False 
-            else:
-                order.partner_invoice_period = False 
+            order.partner_invoice_period = (
+                order.partner_invoice_id.invoice_period
+                or
+                order.partner_invoice_id.parent_id.invoice_period
+            )
+
