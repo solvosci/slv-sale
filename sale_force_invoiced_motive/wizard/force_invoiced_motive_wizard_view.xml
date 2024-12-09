@@ -1,0 +1,20 @@
+<odoo>
+    
+    <record id="force_invoiced_motive_wizard_view_form" model="ir.ui.view">
+        <field name="name">force.invoiced.motive.wizard.view.form</field>
+        <field name="model">force.invoiced.motive.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Force Invoiced Motive">
+                <group>
+                    <field name="sale_order_ids" widget="many2many_tags"/>
+                    <field name="motive"/>
+                </group>
+                <footer>
+                    <button name="action_save_motive" string="Save" type="object"/>
+                    <button name="cancel" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

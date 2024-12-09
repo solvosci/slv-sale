@@ -1,0 +1,41 @@
+<odoo>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale_info']" position="inside">
+                <field 
+                    name="force_invoiced_motive"
+                    groups="sale_force_invoiced.group_force_invoiced"
+                    invisible="force_invoiced != True"
+                    required="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_order_tree" model="ir.ui.view">
+        <field name="name">sale.order.tree (in sale)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_status']" position="after">
+                <field 
+                    name="force_invoiced_motive"
+                    groups="sale_force_invoiced.group_force_invoiced"
+                    optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="model_sale_order_action_force_invoiced" model="ir.actions.server">
+        <field name="name">Force Invoiced</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+        <field name="binding_view_types">tree</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_force_invoiced()</field>
+    </record>
+
+</odoo>
