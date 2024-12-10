@@ -1,0 +1,76 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_pricelist_restricted
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-11 17:11+0000\n"
+"PO-Revision-Date: 2024-12-11 17:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model.fields,field_description:sale_order_pricelist_restricted.field_sale_order__allowed_pricelist_ids
+msgid "Allowed Pricelists"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model,name:sale_order_pricelist_restricted.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model_terms:ir.ui.view,arch_db:sale_order_pricelist_restricted.product_pricelist_view
+msgid "Exclusive Partner"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model.fields,field_description:sale_order_pricelist_restricted.field_product_pricelist__sale_order_exclusive_partner_id
+msgid "Exclusive Partner for Sales Orders"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model.fields,field_description:sale_order_pricelist_restricted.field_product_pricelist__sale_order_selectable
+msgid "Is selectable in Sales Orders"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model,name:sale_order_pricelist_restricted.model_product_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model,name:sale_order_pricelist_restricted.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model_terms:ir.ui.view,arch_db:sale_order_pricelist_restricted.product_pricelist_view
+msgid "Sales Order Restrictions"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model.fields,field_description:sale_order_pricelist_restricted.field_product_pricelist__salesman_user_ids
+msgid "Salesman Users"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model_terms:ir.ui.view,arch_db:sale_order_pricelist_restricted.product_pricelist_view
+msgid "Selectable"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model_terms:ir.ui.view,arch_db:sale_order_pricelist_restricted.product_pricelist_view_search
+msgid "Selectable in Sales Orderes"
+msgstr ""
+
+#. module: sale_order_pricelist_restricted
+#: model:ir.model.fields,help:sale_order_pricelist_restricted.field_sale_order__allowed_pricelist_ids
+msgid "Technical field to filter pricelists for this order"
+msgstr ""

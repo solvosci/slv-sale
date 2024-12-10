@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_order_pricelist_restricted)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pricelist_id'][1]" position="before">
+                <field name="allowed_pricelist_ids" invisible="1" />
+            </xpath>
+            <xpath expr="//field[@name='pricelist_id'][1]" position="attributes">
+                <attribute name="domain">[('id', 'in', allowed_pricelist_ids)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
