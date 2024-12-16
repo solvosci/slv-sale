@@ -10,9 +10,7 @@ class ResPartner(models.Model):
     def create(self, vals_list):
         # When creating records, we need to update affected pricelists
         res = super().create(vals_list)
-        res.sudo().filtered(
-            lambda x: x.property_product_pricelist
-        )._update_salesman_user_ids()
+        res.sudo().property_product_pricelist._update_salesman_user_ids()
         return res
 
     def write(self, values):
