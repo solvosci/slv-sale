@@ -1,0 +1,23 @@
+<odoo>
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.view.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='name']" position="after">
+                <field
+                    name="color_code_tintometric"
+                    readonly="qty_invoiced &gt; 0"
+                    optional="show"
+                />
+            </xpath>
+            <xpath expr="//form//field[@name='price_unit']" position="after">
+                <field
+                    name="color_code_tintometric"
+                    readonly="qty_invoiced &gt; 0"
+                    optional="show"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
