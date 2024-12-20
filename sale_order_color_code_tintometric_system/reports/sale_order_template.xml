@@ -1,0 +1,22 @@
+<odoo>
+    <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <xpath expr='//th[@name="th_description"]' position="after">
+            <t t-set="display_color" t-value="any(line.sudo().color_code_tintometric for line in doc.order_line)"/>
+            <t t-if="display_color">
+                <th name="color_code_tintometric" class="text-end">Lot/S.Tin</th>
+            </t>
+        </xpath>
+        <xpath expr="//td[@name='td_quantity']" position="before">
+            <t t-if="display_color">
+                <t t-if="line.color_code_tintometric">
+                    <td name="color_code_tintometric" class="text-end">
+                        <span t-field='line.color_code_tintometric'/>
+                    </td>
+                </t>
+                <t t-else="not line.color_code_tintometric">
+                    <td name="color_code_tintometric" class="text-end"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+</odoo>
