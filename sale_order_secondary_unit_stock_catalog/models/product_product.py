@@ -55,13 +55,13 @@ class Product(models.Model):
                 ssu_qty_available = (
                     product.qty_available / product.sale_secondary_uom_id.factor
                 )
-                product.write({
+                product.update({
                     "sale_secondary_unit_qty_available": ssu_qty_available,
                     "has_sale_secondary_unit_qty_available": not float_is_zero(
                         ssu_qty_available, precision_digits=dp
                     ),
                 })
-        (self - products_ssu).write({
+        (self - products_ssu).update({
             "sale_secondary_unit_qty_available": 0.0,
             "has_sale_secondary_unit_qty_available": False,
         })
