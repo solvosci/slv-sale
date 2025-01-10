@@ -13,13 +13,13 @@
             expr="//t[@t-call='sale.document_tax_totals']"
             position="attributes"
         >
-            <attribute name="t-if">False</attribute>
+            <attribute name="groups">sale_order_report_wo_taxation.group_taxes_on_report_saleorder_document</attribute>
         </xpath>
         <xpath
             expr="//t[@t-call='sale.document_tax_totals']"
             position="after"
         >
-            <tr 
+            <tr groups="!sale_order_report_wo_taxation.group_taxes_on_report_saleorder_document"
                 class="border-black o_total"
                 style="font-size: 1.5em"
             >
@@ -28,7 +28,7 @@
                     <span t-field="doc.amount_untaxed" />
                 </td>
             </tr>
-            <tr class="border-black">
+            <tr class="border-black" groups="!sale_order_report_wo_taxation.group_taxes_on_report_saleorder_document">
                 <td
                     class="text-end"
                     colspan="2"
