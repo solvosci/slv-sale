@@ -7,12 +7,14 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "17.0.1.0.0",
+    "version": "17.0.2.0.0",
     'category': "Operations/Sale",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": ["sale"],
     "data": [
-        "reports/sale_order_report.xml"
+        "security/sale_order_security.xml",
+        "reports/sale_order_report.xml",
+        "views/res_config_settings.xml",
     ],
     'installable': True,
 }
