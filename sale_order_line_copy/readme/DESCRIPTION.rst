@@ -1,0 +1,1 @@
+Adds an icon to copy sales order lines within sales order form
