@@ -1,0 +1,7 @@
+<odoo>
+
+    <record id="sales_team.group_sale_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('partner_readonly_security.group_partner_edition'))]"/>
+    </record>
+
+</odoo>
