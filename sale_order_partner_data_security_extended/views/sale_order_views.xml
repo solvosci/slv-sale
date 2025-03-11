@@ -1,0 +1,18 @@
+<odoo>
+
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_order_partner_data_security)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="priority">99</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_policy']" position="attributes">
+                <attribute name="readonly">not is_partner_editor</attribute>
+            </xpath>
+            <xpath expr="//field[@name='payment_mode_id']" position="attributes">
+                <attribute name="readonly">not is_partner_editor</attribute>
+            </xpath>
+        </field>
+    </record> 
+
+</odoo>

@@ -1,0 +1,1 @@
+Extends the restricted partner information in sales order by security group.
