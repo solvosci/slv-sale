@@ -1,0 +1,7 @@
+<odoo>
+    <record id="sale_order_line_modification_company_rule" model="ir.rule">
+        <field name="name">Access modifications in own companies only</field>
+        <field name="model_id" ref="sale_order_field_advanced.model_sale_order_line_modification"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

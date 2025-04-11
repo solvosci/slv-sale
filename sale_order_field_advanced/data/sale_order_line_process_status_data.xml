@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="process_status_no_manufacturing"
+            model="sale.order.line.process.status">
+            <field name="name">No Manufacturing</field>
+            <field name="no_process_default_state" eval="True" />
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="process_status_pending"
+            model="sale.order.line.process.status">
+            <field name="name">Pending</field>
+            <field name="initial_default_state" eval="True" />
+            <field name="sequence">2</field>
+        </record>
+
+        <record id="process_status_cutting"
+            model="sale.order.line.process.status">
+            <field name="name">Cutting</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <record id="process_status_confection"
+            model="sale.order.line.process.status">
+            <field name="name">Confection</field>
+            <field name="sequence">4</field>
+        </record>
+
+        <record id="process_status_manufactured"
+            model="sale.order.line.process.status">
+            <field name="name">Manufactured</field>
+            <field name="sequence">5</field>
+            <field name="final_state" eval="True"/>
+        </record>
+    </data>
+</odoo>

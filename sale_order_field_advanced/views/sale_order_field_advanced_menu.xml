@@ -1,0 +1,67 @@
+<odoo>
+    <record id='action_modification_tree' model='ir.actions.act_window'>
+        <field name='name'>Modifications</field>
+        <field name='res_model'>sale.order.line.modification</field>
+        <field name='view_mode'>tree</field>
+    </record>
+
+    <record id='action_process_status_tree' model='ir.actions.act_window'>
+        <field name='name'>Process status</field>
+        <field name='res_model'>sale.order.line.process.status</field>
+        <field name='view_mode'>tree</field>
+    </record>
+
+    <record id='action_complement_size_equivalence_tree' model='ir.actions.act_window'>
+        <field name='name'>Complement size equivalence</field>
+        <field name='res_model'>product.complement.size</field>
+        <field name='view_mode'>tree</field>
+    </record>
+
+    <record id='action_sale_order_line_advanced_tree' model='ir.actions.act_window'>
+        <field name='name'>Process Control</field>
+        <field name='res_model'>sale.order.line</field>
+        <field name='view_mode'>tree</field>
+        <field name='domain'>[('adv_product_has_process_control', '=', True), ('state', '=', 'sale'
+            )]</field>
+        <field name='context'>{'modification_display_name':True, 'search_default_in_process_state': 1}</field>
+        <field name='view_id' ref='view_sale_order_line_tree_extend' />
+        <field name='search_view_id' ref='view_sale_order_line_search_custom' />
+    </record>
+
+    <record id="action_change_manufacturing_state" model="ir.actions.server">
+        <field name="name">Change Manufacturing State</field>
+        <field name="model_id" ref="sale.model_sale_order_line" />
+        <field name="binding_model_id" ref="sale.model_sale_order_line" />
+        <field name="binding_type">action</field>
+        <field name="state">code</field>
+        <field name="code"> action=model.open_manufacturing_state_wizard()</field>
+    </record>
+
+    <menuitem
+        id='modification_menu'
+        name='Modifications'
+        action='sale_order_field_advanced.action_modification_tree'
+        parent='sale.prod_config_main'
+        sequence='10' />
+
+    <menuitem
+        id='process_status_menu'
+        name='Process Status'
+        action='sale_order_field_advanced.action_process_status_tree'
+        parent='sale.prod_config_main'
+        sequence='11' />
+
+    <menuitem
+        id='complement_size_equivalence_menu'
+        name='Complement size equivalence'
+        action='sale_order_field_advanced.action_complement_size_equivalence_tree'
+        parent='sale.prod_config_main'
+        sequence='13' />
+
+    <menuitem
+        id='sale_menu'
+        name='Process Control'
+        action='sale_order_field_advanced.action_sale_order_line_advanced_tree'
+        parent='sale.sale_order_menu'
+        sequence='5' />
+</odoo>

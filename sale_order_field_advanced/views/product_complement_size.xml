@@ -1,0 +1,13 @@
+<odoo>
+    <record id="product_complement_size_tree" model="ir.ui.view">
+        <field name="name">product.complement.size.tree</field>
+        <field name="model">product.complement.size</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" default_order="name" edit="1">
+                <field name="attribute_id" />
+                <field name="product_size_ids" widget="many2many_tags"/>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+</odoo>

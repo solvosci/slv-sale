@@ -1,0 +1,388 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_field_advanced
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-22 09:17+0000\n"
+"PO-Revision-Date: 2025-09-22 09:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__active
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__active
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__active
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_modification_search
+msgid "Active"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_characteristics
+msgid "Adv Characteristics"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_complement_id
+msgid "Adv Complement"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_complement_group
+msgid "Adv Complement Group"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_complement_size
+msgid "Adv Complement Size"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_is_tailored
+msgid "Adv Is Tailored"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_manufacturing_state_id
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__adv_manufacturing_state_id
+msgid "Adv Manufacturing State"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_manufacturing_state_decoration
+msgid "Adv Manufacturing State Decoration"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_modification_id
+msgid "Adv Modification"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_note
+msgid "Adv Note"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_reference
+msgid "Adv Reference"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_unitary_product_price
+msgid "Adv Unitary Product Price"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__attribute_id
+msgid "Attribute"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_process_status__decoration_color__info
+msgid "Blue"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.change_manufacturing_state_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: code:addons/sale_order_field_advanced/models/sale_order_line.py:0
+#: model:ir.actions.server,name:sale_order_field_advanced.action_change_manufacturing_state
+#, python-format
+msgid "Change Manufacturing State"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_sale_order_line_manufacturing_state_wizard
+msgid "Change Manufacturing State Wizard"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.change_manufacturing_state_wizard_form
+msgid "Change manufacturing status"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__company_id
+msgid "Company"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_product__complement_category_ids
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_template__complement_category_ids
+msgid "Complement Categories"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__name
+msgid "Complement Size"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.actions.act_window,name:sale_order_field_advanced.action_complement_size_equivalence_tree
+#: model:ir.ui.menu,name:sale_order_field_advanced.complement_size_equivalence_menu
+msgid "Complement size equivalence"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_confection
+msgid "Confection"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__create_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__create_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__create_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__create_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__create_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__create_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,help:sale_order_field_advanced.field_sale_order_line__adv_date_order
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_cutting
+msgid "Cutting"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__decoration_color
+msgid "Decoration Color"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__name
+msgid "Description"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__display_name
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__display_name
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__display_name
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_final_state
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__final_state
+msgid "Final State"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_search_custom
+msgid "Finished"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_process_status__decoration_color__success
+msgid "Green"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_process_status__decoration_color__muted
+msgid "Grey"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_category__has_process_control
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_product_has_process_control
+msgid "Has Process Control"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__id
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__id
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__id
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_search_custom
+msgid "In Process"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_modification_search
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_process_status_search
+msgid "Inactive"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__no_process_default_state
+msgid "Is Initial No Process State"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__initial_default_state
+msgid "Is Initial State"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size____last_update
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard____last_update
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification____last_update
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__write_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__write_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__write_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__write_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__write_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__write_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_manufactured
+msgid "Manufactured"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_manufacturing_state_name
+msgid "Manufacturing State Name"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.actions.act_window,name:sale_order_field_advanced.action_modification_tree
+#: model:ir.ui.menu,name:sale_order_field_advanced.modification_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_modification_search
+msgid "Modifications"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__name
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__name
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_modification_search
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_process_status_search
+msgid "Name"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_no_manufacturing
+msgid "No Manufacturing"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_date_order
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_search_custom
+msgid "Order Date"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_pending
+msgid "Pending"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__price
+msgid "Price"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.actions.act_window,name:sale_order_field_advanced.action_sale_order_line_advanced_tree
+#: model:ir.ui.menu,name:sale_order_field_advanced.sale_menu
+msgid "Process Control"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.ui.menu,name:sale_order_field_advanced.process_status_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.view_sale_order_line_process_status_search
+msgid "Process Status"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.actions.act_window,name:sale_order_field_advanced.action_process_status_tree
+msgid "Process status"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_product_complement_size
+msgid "Product Complement Size"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__product_size_ids
+msgid "Product Size"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_process_status__decoration_color__danger
+msgid "Red"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_sale_order_line_modification
+msgid "Sale Order Line Modification"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_sale_order_line_process_status
+msgid "Sale Order Line Process Status"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__line_ids
+msgid "Sale Order Lines"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_process_status__decoration_color__warning
+msgid "Yellow"
+msgstr ""

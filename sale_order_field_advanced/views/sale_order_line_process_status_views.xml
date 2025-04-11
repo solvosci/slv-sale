@@ -1,0 +1,28 @@
+<odoo>
+    <record id="sale_order_line_process_status_tree" model="ir.ui.view">
+        <field name="name">sale.order.line.process.status.tree</field>
+        <field name="model">sale.order.line.process.status</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" decoration-muted="not active" default_order="sequence" edit="1">
+                <field name="active" invisible="1" />
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="decoration_color"/>
+                <field name="initial_default_state" />
+                <field name="no_process_default_state" />
+                <field name="final_state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_sale_order_line_process_status_search" model="ir.ui.view">
+        <field name="name">sale.order.line.process.status.search</field>
+        <field name="model">sale.order.line.process.status</field>
+        <field name="arch" type="xml">
+            <search string="Process Status">
+                <field name="name" string="Name" />
+                <filter string="Inactive" name="inactive_filter" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+</odoo>

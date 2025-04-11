@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="change_manufacturing_state_wizard_form" model="ir.ui.view">
+        <field name="name">sale.order.line.manufacturing.state.wizard</field>
+        <field name="model">sale.order.line.manufacturing.state.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="adv_manufacturing_state_id" required="True"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="change_manufacturing_state"
+                            string="Change manufacturing status" type="object"
+                            class="btn-primary" />
+                        <button string="Cancel" special="cancel" class="btn-secondary" />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
