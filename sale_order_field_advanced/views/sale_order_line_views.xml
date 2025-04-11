@@ -1,0 +1,104 @@
+<odoo>
+	<record id='view_sale_order_form_inherit_advanced' model='ir.ui.view'>
+		<field name='name'>sale.order.form (in sale_order_field_advanced)</field>
+		<field name='model'>sale.order</field>
+		<field name='inherit_id' ref='sale.view_order_form' />
+		<field name='arch' type='xml'>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='name']" position='after'>
+				<field name='state' invisible='1' />
+				<field name='adv_product_has_process_control' invisible='1' />
+				<field name='adv_reference'
+					optional='hide'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+				<field name='adv_is_tailored' optional='hide'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+				<field name='adv_characteristics' optional='hide'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+				<field name='adv_modification_id' optional='hide'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+				<field name='adv_note' optional='hide'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+				<field name='adv_complement_id' optional='hide'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+				<field name='adv_complement_size' optional='hide' readonly='1' />
+				<field name='adv_manufacturing_state_id' optional='show'
+					attrs="{'readonly': ['|', ('state', 'in', ['done', 'cancel']), ('adv_product_has_process_control', '!=', True)]}" />
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']"
+				position='before'>
+				<field name='adv_unitary_product_price' />
+			</xpath>
+			<xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']"
+				position='attributes'>
+				<attribute name="readonly">1</attribute>
+			</xpath>
+		</field>
+	</record>
+
+	<record id='view_sale_order_line_tree_extend' model='ir.ui.view'>
+		<field name='name'>sale.order.line.tree</field>
+		<field name='model'>sale.order.line</field>
+		<field name="priority">999</field>
+		<field name="mode">primary</field>
+		<field name='arch' type='xml'>
+			<tree>
+				<field name='state' invisible='1' />
+				<field name='adv_product_has_process_control' invisible='1' />
+				<field name="adv_manufacturing_state_decoration" invisible='1' />
+				<field name='order_id' />
+				<field name='order_partner_id' />
+				<field name='product_uom_qty' />
+				<field name='product_id' />
+				<field name='adv_complement_group' optional='show' />
+				<field name='adv_reference' />
+				<field name='adv_is_tailored' optional='show' />
+				<field name='adv_characteristics' optional='show' />
+				<field name='adv_modification_id' optional='show' />
+				<field name='adv_note' optional='show' />
+				<field name="adv_manufacturing_state_id" widget="badge"
+					decoration-info="adv_manufacturing_state_decoration == 'info'"
+					decoration-warning="adv_manufacturing_state_decoration == 'warning'"
+					decoration-success="adv_manufacturing_state_decoration == 'success'"
+					decoration-muted="adv_manufacturing_state_decoration == 'muted'"
+					decoration-danger="adv_manufacturing_state_decoration == 'danger'" />
+				<field name='adv_date_order' />
+			</tree>
+		</field>
+	</record>
+
+	<record id='view_sale_order_line_search_custom' model='ir.ui.view'>
+		<field name='name'>sale.order.line.search</field>
+		<field name='model'>sale.order.line</field>
+		<field name="priority">999</field>
+		<field name="mode">primary</field>
+		<field name='arch' type='xml'>
+			<search>
+				<field name='product_id' />
+				<field name='order_id' />
+				<field name='order_partner_id' />
+				<field name='adv_manufacturing_state_id' />
+				<field name="adv_manufacturing_state_name" invisible="1" />
+				<field name="adv_final_state" invisible="1" />
+				<separator />
+				<filter name="in_process_state" string="In Process"
+					domain="[('adv_final_state', '=', False)]" />
+				<filter name="final_state" string="Finished"
+					domain="[('adv_final_state', '=', True)]" />
+				<separator />
+				<filter string="Order Date" name="order_date" date="adv_date_order" />
+				<filter name='group_adv_manufacturing_state_id'
+					context='{"group_by": "adv_manufacturing_state_id"}' />
+				<filter name="group_adv_complement_group"
+                    context="{'group_by': 'adv_complement_group'}"/>
+				<filter name="group_adv_complement_id"
+                    context="{'group_by': 'adv_complement_id'}"/>
+				<filter name='group_adv_is_tailored'
+					context='{"group_by" : "adv_is_tailored"}' />
+				<filter name='group_order_id'
+					context='{"group_by": "order_id"}' />
+				<filter name='group_adv_date_order'
+					context='{"group_by": "adv_date_order"}' />
+			</search>
+		</field>
+	</record>
+</odoo>

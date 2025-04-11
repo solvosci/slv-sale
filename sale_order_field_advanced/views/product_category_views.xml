@@ -1,0 +1,12 @@
+<odoo>
+	<record id='view_product_category_form_inherit_advanced' model='ir.ui.view'>
+		<field name='name'>product.category (in sale_order_field_advanced)</field>
+		<field name='model'>product.category</field>
+		<field name='inherit_id' ref='product.product_category_form_view' />
+		<field name='arch' type='xml'>
+			<xpath expr="//field[@name='parent_id']" position='after'>
+				<field name='has_process_control' />
+			</xpath>
+		</field>
+	</record>
+</odoo>

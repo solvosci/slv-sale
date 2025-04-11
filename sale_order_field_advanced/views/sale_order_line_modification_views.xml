@@ -1,0 +1,27 @@
+<odoo>
+    <record id="sale_order_line_modification_tree" model="ir.ui.view">
+        <field name="name">sale.order.line.modification.tree</field>
+        <field name="model">sale.order.line.modification</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" decoration-muted="not active" default_order="name" edit="1">
+                <field name="active" invisible="1" />
+                <field name="name" />
+                <field name="price" />
+                <field name="company_id" />
+                <field name="currency_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_sale_order_line_modification_search" model="ir.ui.view">
+        <field name="name">sale.order.line.modification.search</field>
+        <field name="model">sale.order.line.modification</field>
+        <field name="arch" type="xml">
+            <search string="Modifications">
+                <field name="name" string="Name" />
+                <filter string="Active" name="active_filter" domain="[('active', '=', True)]" />
+                <filter string="Inactive" name="inactive_filter" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+</odoo>
