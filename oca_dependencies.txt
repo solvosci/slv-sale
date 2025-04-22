@@ -1,3 +1,4 @@
 sale-workflow https://github.com/solvosci/sale-workflow 13.0-mig-sale_order_line_menu
 slv-general https://github.com/solvosci/slv-general/
 stock-logistics-workflow
+credit-control
