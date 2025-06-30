@@ -1,0 +1,19 @@
+<odoo>
+
+    <record id="sale.sale_order_see_all" model="ir.rule">
+        <field name="domain_force">['|',('create_uid','=',user.id),('warehouse_id.id','=',user.property_warehouse_id.id)]</field>
+    </record>
+
+    <record id="sale.sale_order_line_see_all" model="ir.rule">
+        <field name="domain_force">
+        [
+            "|",
+                ("create_uid", "=", user.id),
+            "|",
+                ("order_id.create_uid", "=", user.id),
+                ("order_id.warehouse_id.id", "=", user.property_warehouse_id.id)
+        ]
+        </field>
+    </record>
+
+</odoo>
