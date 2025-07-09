@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_order_account_invoice_change_currency)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <field name="is_company_currency" invisible="1"/>
+                <field name="is_custom_rate" attrs="{'invisible': [('is_company_currency', '=', True)]}"/>
+                <field name="custom_rate" readonly="0" attrs="{'invisible': [('is_custom_rate', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
