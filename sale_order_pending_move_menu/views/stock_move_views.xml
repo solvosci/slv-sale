@@ -1,0 +1,104 @@
+<odoo>
+
+    <record id="stock_move_pending_menu_tree" model="ir.ui.view">
+        <field name="name">stock.move.tree (sale_order_pending_move_menu)</field>
+        <field name="model">stock.move</field>
+        <field name="priority">999</field>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0" edit="0" default_order="move_date_order desc">
+                <field name="move_sale_order_id" widget="many2one"/>
+                <field name="move_date_order" />
+                <field name="move_partner_id" />
+                <field name="move_user_id" widget="many2one_avatar_user" optional="hide"/>
+                <field name="product_id" width="350px"/>
+                <field name="product_uom_qty"/>
+                <field
+                    name="move_product_uom_qty_sale"
+                    string="Sale qty"
+                    optional="hide"
+                />
+                <field
+                    name="move_product_uom_sale"
+                    groups="uom.group_uom"
+                    string="Sale uom qty"
+                />
+                <field name="quantity" string="Move qty" optional="hide"/>
+                <field
+                    name="product_uom"
+                    string="Move uom qty"
+                    groups="uom.group_uom"
+                    optional="hide"
+                />
+                <field
+                    name="move_warehouse_id"
+                    groups="stock.group_stock_multi_warehouses"
+                />
+                <field name="state" widget="badge" optional="show" string="Availability in stock"
+                    decoration-danger="state=='cancel'"
+                    decoration-info="state== 'assigned'"
+                    decoration-muted="state == 'draft'"
+                    decoration-success="state == 'done'"
+                    decoration-warning="state not in ('draft','cancel','done','assigned')"/>
+                <field name="picking_state" widget="badge" optional="hide"
+                    decoration-danger="state=='cancel'"
+                    decoration-info="state== 'assigned'"
+                    decoration-muted="state == 'draft'"
+                    decoration-success="state == 'done'"
+                    decoration-warning="state not in ('draft','cancel','done','assigned')"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_move_pending_menu_search">
+        <field name="name">stock.move.search (sale_order_pending_move_menu)</field>
+        <field name="model">stock.move</field>
+        <field name="priority">999</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="stock.view_move_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="move_sale_order_id" />
+                <field
+                    name="warehouse_id"
+                    groups="stock.group_stock_multi_warehouses"
+                />
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="move_partner_id" />
+                <field name="move_user_id" />
+            </xpath>
+            <xpath expr="//filter[@name='ready']" position="before">
+                <filter
+                    name="last_10_days"
+                    string="Last 10 Days"
+                    domain="[('move_date_order', '&gt;=', (context_today() - relativedelta(days=10)).strftime('%Y-%m-%d'))]"
+                />
+                <separator />
+            </xpath>
+            <xpath expr="//filter[@name='by_product']" position="before">
+                <filter name="by_move_sale_order" context="{'group_by': 'move_sale_order_id'}"/>
+                <filter name="by_move_user_id" context="{'group_by': 'move_user_id'}" />
+                <filter name="by_move_partner_id" context="{'group_by': 'move_partner_id'}" string="Customer"/>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_create_date']" position="before">
+                <filter name="by_move_date_order" context="{'group_by': 'move_date_order'}"/>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_location_id']" position="before">
+                <filter
+                    name="by_warehouse_id"
+                    string="Warehouse"
+                    context="{'group_by': 'warehouse_id'}" 
+                    groups="stock.group_stock_multi_warehouses"
+                />
+            </xpath>
+            <xpath expr="//filter[@name='groupby_picking_type_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_picking_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_pending_move_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-23 15:51+0000\n"
+"PO-Revision-Date: 2025-10-23 17:58+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,help:sale_order_pending_move_menu.field_stock_move__picking_state
+msgid ""
+" * Draft: The transfer is not confirmed yet. Reservation doesn't apply.\n"
+" * Waiting another operation: This transfer is waiting for another operation before being ready.\n"
+" * Waiting: The transfer is waiting for the availability of some products.\n"
+"(a) The shipping policy is \"As soon as possible\": no product could be reserved.\n"
+"(b) The shipping policy is \"When all products are ready\": not all the products could be reserved.\n"
+" * Ready: The transfer is ready to be processed.\n"
+"(a) The shipping policy is \"As soon as possible\": at least one product has been reserved.\n"
+"(b) The shipping policy is \"When all products are ready\": all product have been reserved.\n"
+" * Done: The transfer has been processed.\n"
+" * Cancelled: The transfer has been cancelled."
+msgstr ""
+"* Borrador: La transferencia no ha sido confirmada. No se realizan reservas.\n"
+" * Esperando otra operación: La transferencia espera otra operación antes de estar preparada.\n"
+" * Esperando: La transferencia está esperando disponibilidad de algunos productos.\n"
+"(a) La política de envío es \"Tan pronto como sea posible\" ningún producto pudo ser reservado.\n"
+"(b) La política de envío es \"Cuando todos los productos estén listos\": no todos los productos pueden reservarse.\n"
+" * Preparado: La transferencia está lista para ser procesada.\n"
+"(a) La política de envío es \"Tan pronto como sea posible\": por lo menos un producto se ha reservado.\n"
+"(b) La política de envío es \"Cuando todos los productos estén listos\": todos los productos han sido reservados.\n"
+" * Hecho: la transferencia ha sido procesada.\n"
+" * Cancelado: la transferencia ha sido cancelada."
+
+#. module: sale_order_pending_move_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_tree
+msgid "Availability in stock"
+msgstr "Disp. almacén"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,help:sale_order_pending_move_menu.field_stock_move__move_date_order
+msgid ""
+"Creation date of draft/sent orders,\n"
+"Confirmation date of confirmed orders."
+msgstr ""
+"Fecha de creación de los presupuestos borrador o enviados,\n"
+"Fecha de confirmación de los pedidos confirmados."
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_partner_id
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_search
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: sale_order_pending_move_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_search
+msgid "Last 10 Days"
+msgstr "Últimos 10 días"
+
+#. module: sale_order_pending_move_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_tree
+msgid "Move qty"
+msgstr "Cant. en almacén"
+
+#. module: sale_order_pending_move_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_tree
+msgid "Move uom qty"
+msgstr "Ud. almacén"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_date_order
+msgid "Order Date"
+msgstr "Fecha de pedido"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.actions.act_window,name:sale_order_pending_move_menu.action_pending_stock_move_menu
+#: model:ir.ui.menu,name:sale_order_pending_move_menu.menu_sale_order_pending_moves
+msgid "Pending Sale Moves"
+msgstr "Movimientos de venta pendientes"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_product_uom_qty_sale
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_sale_order_id
+msgid "Sale Order"
+msgstr "Pedido"
+
+#. module: sale_order_pending_move_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_tree
+msgid "Sale qty"
+msgstr "Cant. venta"
+
+#. module: sale_order_pending_move_menu
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_tree
+msgid "Sale uom qty"
+msgstr "Unidad de venta"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_user_id
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__picking_state
+msgid "Status"
+msgstr "Estado del albarán"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model,name:sale_order_pending_move_menu.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de stock"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_product_uom_sale
+msgid "Unit of Measure"
+msgstr "Unidad de venta"
+
+#. module: sale_order_pending_move_menu
+#: model:ir.model.fields,field_description:sale_order_pending_move_menu.field_stock_move__move_warehouse_id
+#: model_terms:ir.ui.view,arch_db:sale_order_pending_move_menu.stock_move_pending_menu_search
+msgid "Warehouse"
+msgstr "Almacén"
