@@ -1,0 +1,28 @@
+<odoo>
+
+    <record id="stock_move_pending_menu_tree" model="ir.ui.view">
+        <field name="name">stock.move.tree (in sale_order_pending_move_menu_pb)</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="sale_order_pending_move_menu.stock_move_pending_menu_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="move_product_brand_id" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_move_pending_menu_search" model="ir.ui.view">
+        <field name="name">stock.move.seach (in sale_order_pending_move_menu_pb)</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="sale_order_pending_move_menu.stock_move_pending_menu_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_id']" position="after">
+                <field name="move_product_brand_id" />
+            </xpath>
+            <xpath expr="//filter[@name='by_product']" position="after">
+                <filter string="Brand" name="by_brand" domain="[]" context="{'group_by': 'move_product_brand_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
