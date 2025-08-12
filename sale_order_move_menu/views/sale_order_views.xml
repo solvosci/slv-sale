@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <record id="action_stock_move_move_menu" model="ir.actions.act_window">
@@ -26,12 +25,12 @@
         </field>
     </record>
 
-    <menuitem 
+    <menuitem
         id="menu_sale_order_sale_moves"
-        name="Sale Moves" 
+        name="Sale Moves"
         action="action_stock_move_move_menu_srv"
         parent="sale.product_menu_catalog"
-        sequence="3"
+        sequence="50"
         groups="stock.group_stock_user"
     />
 
