@@ -27,10 +27,9 @@ class StockMove(models.Model):
         #  but has the problem of the needed "fake zero results domain" in
         #  order to prevent "F5" pages reload, that should only use the
         #  original action definition
-        action = self.env.ref(
+        result = self.env["ir.actions.act_window"]._for_xml_id(
             "sale_order_move_menu.action_stock_move_move_menu"
         )
-        result = action.read()[0]
         # Default (fake) domain is replaced with the right one
         domain_str = "('sale_line_id','!=',False), ('state','=','done')"
         if not self._check_sale_all_permissions(self.env.user):
