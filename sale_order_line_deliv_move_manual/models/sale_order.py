@@ -19,12 +19,12 @@ class SaleOrder(models.Model):
     )
 
     @api.depends(
-        "picking_ids.move_lines.state",
-        "picking_ids.move_lines.qty_delivered_dest",
+        "picking_ids.move_ids.state",
+        "picking_ids.move_ids.qty_delivered_dest",
     )
     def _compute_has_pend_qty_delivered_dest(self):
         for order in self:
-            moves_done = order.picking_ids.move_lines.filtered(
+            moves_done = order.picking_ids.move_ids.filtered(
                 lambda x: x.state == "done"
                 and x.product_id.invoice_policy == "stock_move_dest"
             )
