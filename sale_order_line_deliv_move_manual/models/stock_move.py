@@ -11,8 +11,6 @@ class StockMove(models.Model):
         "Destination Delivered Quantity",
         digits="Product Unit of Measure",
         copy=False,
-        readonly=True,
-        states={"done": [("readonly", False)]},
         help="""
         This field shows the delivered quantity accepted by destination.
         Depending on invoice policy, this field could be used for invoicing

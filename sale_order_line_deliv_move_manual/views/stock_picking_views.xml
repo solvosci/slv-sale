@@ -13,35 +13,16 @@
                 <field name="sale_id" invisible="1"/>
             </xpath>
             <xpath
-                expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity_done']"
+                expr="//field[@name='move_ids_without_package']//tree//field[@name='quantity']"
                 position="after"
             >
-                <field name="product_invoice_policy" invisible="1"/>
-                <field
-                    name="qty_delivered_dest" 
-                    string="Dest."
-                    attrs="{
-                        'column_invisible': [('parent.sale_id', '=', False)],
-                        'readonly': [('product_invoice_policy', '!=', 'stock_move_dest')],
-                    }"                    
-                    optional="show"
-                />
-            </xpath>
-            <xpath
-                expr="//field[@name='move_ids_without_package']//form//group//field[@name='quantity_done']"
-                position="after"
-            >
-                <field name="product_invoice_policy" invisible="1"/>
-                <field name="sale_line_id" invisible="1"/>
+                <field name="product_invoice_policy" column_invisible="1"/>
                 <field
                     name="qty_delivered_dest"
-                    attrs="{
-                        'invisible': [
-                            '|',
-                            ('product_invoice_policy', '!=', 'stock_move_dest'),
-                            ('sale_line_id', '=', False),
-                        ],
-                    }"
+                    string="Dest."
+                    column_invisible="not parent.sale_id"
+                    readonly="product_invoice_policy != 'stock_move_dest'"
+                    optional="show"
                 />
             </xpath>
         </field>

@@ -14,7 +14,6 @@ class SaleOrderLine(models.Model):
         compute="_compute_qty_delivered_dest",
         compute_sudo=True,
         store=True,
-        readonly=True,
         digits="Product Unit of Measure",
         help="""
         This field shows the delivered quantity accepted by destination.
@@ -46,11 +45,11 @@ class SaleOrderLine(models.Model):
             line.qty_delivered_dest = qty
 
     @api.depends("qty_delivered_dest")
-    def _get_to_invoice_qty(self):
+    def _compute_qty_to_invoice(self):
         """
         qty_to_invoice attends the new possible invoice policy
         """
-        super()._get_to_invoice_qty()
+        super()._compute_qty_to_invoice()
         for line in self.filtered(
             lambda x: x.state in ("sale", "done")
             and x.product_id.invoice_policy == "stock_move_dest"
