@@ -45,7 +45,7 @@ class StockMove(models.Model):
         store=True
     )
 
-    @api.depends("state", "sale_line_id.price_unit", "invoice_line_ids.move_id.state", "invoice_line_ids.price_unit", "quantity_done")
+    @api.depends("state", "sale_line_id.price_unit", "invoice_line_ids.move_id.state", "invoice_line_ids.price_unit", "quantity")
     def _compute_sale_move_menu(self):
         precision = self.env["decimal.precision"].precision_get("Product Price")
         for record in self:
@@ -61,16 +61,16 @@ class StockMove(models.Model):
             invoice_lines = record.invoice_line_ids.filtered(lambda x: x.move_id.state == 'posted')
             record.menu_invoice_lines_count = len(invoice_lines)
             prices = [invoice.price_unit for invoice in invoice_lines]
-            record.menu_quantity_done = record.quantity_done
+            record.menu_quantity_done = record.quantity
             record.menu_negative_amount = False
 
             if any(1 if float_compare(prices[0], price, precision_digits=precision) else 0 for price in prices) or record.menu_invoice_lines_count == 0:
                 record.menu_price_unit = record.sale_line_id.price_unit
             else:
                 record.menu_price_unit = prices[0]
-            record.menu_price_amount_total = record.menu_price_unit * record.quantity_done
+            record.menu_price_amount_total = record.menu_price_unit * record.quantity
 
             if record.picking_code == 'incoming':
-                record.menu_quantity_done = -record.quantity_done
+                record.menu_quantity_done = -record.quantity
                 record.menu_price_amount_total = -record.menu_price_amount_total
                 record.menu_negative_amount = True
