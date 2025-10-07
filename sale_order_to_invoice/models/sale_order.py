@@ -7,18 +7,18 @@ from odoo import api, fields, models
 class SaleOrder(models.Model):
     _inherit = "sale.order"
 
-    amount_to_invoice = fields.Monetary(
+    amount_to_invoice_untaxed = fields.Monetary(
         string="To Invoice",
         store=True,
         readonly=True,
-        compute="_compute_amount_to_invoice",
+        compute="_compute_amount_to_invoice_untaxed",
         help="Total amount currently pending to invoice (tax excl.)",
     )
 
     @api.depends("order_line.qty_to_invoice", "order_line.price_unit_wd")
-    def _compute_amount_to_invoice(self):
+    def _compute_amount_to_invoice_untaxed(self):
         for order in self:
-            order.amount_to_invoice = sum([
+            order.amount_to_invoice_untaxed = sum([
                 line.qty_to_invoice * line.price_unit_wd
                 for line in order.order_line
             ])

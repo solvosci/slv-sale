@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <field name="amount_untaxed" position="after">
                 <field
-                    name="amount_to_invoice"
+                    name="amount_to_invoice_untaxed"
                     sum="Total To Invoice Tax Excluded"
                     widget="monetary"
                     optional="hide"
