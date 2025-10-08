@@ -7,6 +7,7 @@ from odoo import models, fields
 class SaleOrderLineProcessStatus(models.Model):
     _name = 'sale.order.line.process.status'
     _description = 'Sale Order Line Process Status'
+    _order = 'sequence'
 
     name = fields.Char(required=True, translate=True)
     sequence = fields.Integer()

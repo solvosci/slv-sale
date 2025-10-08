@@ -3,7 +3,7 @@
         <field name="name">sale.order.line.process.status.tree</field>
         <field name="model">sale.order.line.process.status</field>
         <field name="arch" type="xml">
-            <tree editable="bottom" decoration-muted="not active" default_order="sequence" edit="1">
+            <tree editable="bottom" decoration-muted="not active" edit="1">
                 <field name="active" invisible="1" />
                 <field name="sequence" widget="handle" />
                 <field name="name" />
