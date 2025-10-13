@@ -1,2 +1,3 @@
 brand
 sale-workflow
+https://github.com/solvosci/slv-e-commerce/slv-e-commerce
