@@ -12,5 +12,6 @@ class ProductTemplate(models.Model):
         'product_category_complement_rel',
         'complement_id',
         'category_id',
-        string='Complement Categories'
+        string='Complement Categories',
+        domain=[('is_complement_category', '=', True)]
     )
