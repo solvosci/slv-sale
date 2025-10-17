@@ -6,7 +6,34 @@
 		<field name='arch' type='xml'>
 			<xpath expr="//field[@name='parent_id']" position='after'>
 				<field name='has_process_control' />
+				<field name='is_complement_category' />
 			</xpath>
 		</field>
 	</record>
+
+    <record id="view_product_category_tree_inherit_complement" model="ir.ui.view">
+		<field name="name">product.category.tree.inherit.complement</field>
+		<field name="model">product.category</field>
+		<field name="inherit_id" ref="product.product_category_list_view"/>
+		<field name="arch" type="xml">
+			<xpath expr="//tree" position="inside">
+				<field name="is_complement_category" optional="hide" widget="boolean_toggle"/>
+			</xpath>
+		</field>
+	</record>
+
+    <record id="view_product_category_search_inherit_complement" model="ir.ui.view">
+        <field name="name">product.category.search.inherit.complement</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_search_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter
+                    string="Complement Categories"
+                    name="is_complement_category"
+                    domain="[('is_complement_category', '=', True)]"
+                />
+            </xpath>
+        </field>
+    </record>
 </odoo>

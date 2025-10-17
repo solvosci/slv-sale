@@ -16,7 +16,7 @@ class SaleOrderLine(models.Model):
     adv_note = fields.Text()
     adv_complement_id = fields.Many2one('product.template')
     adv_complement_size = fields.Char()
-    adv_complement_group = fields.Char(compute="_compute_adv_complement_group", store=True)
+    adv_complement_group = fields.Char()
     adv_manufacturing_state_id = fields.Many2one('sale.order.line.process.status',
                                                  compute='_compute_adv_manufacturing_state_id', store=True)
     adv_date_order = fields.Datetime(
@@ -62,13 +62,11 @@ class SaleOrderLine(models.Model):
                 record.adv_manufacturing_state_id = no_process_state
                 record.clear_fields()
 
-    @api.depends('adv_complement_id', 'adv_complement_size')
-    def _compute_adv_complement_group(self):
-        for line in self:
+    def recalculate_complement_group(self, result):
+        for line in result:
             if line.adv_complement_id:
-                complement = line.adv_complement_id.name if line.adv_complement_id else ''
-                size = line.adv_complement_size if line.adv_complement_size else ''
-                line.adv_complement_group = f"{complement} | {size}"
+                line.adv_complement_size = line.complement_size()
+                line.adv_complement_group = f"{line.adv_complement_id.name} | {line.adv_complement_size}".strip()
 
     def clear_fields(self):
         self.update({
@@ -87,21 +85,17 @@ class SaleOrderLine(models.Model):
 
     def write(self, values):
         result = super(SaleOrderLine, self.sudo()).write(values)
+        if 'adv_complement_id' in values or 'name' in values:
+            self.recalculate_complement_group(self)
         self.recalculate_unitary_price(values)
-        for line in self:
-            if line.product_id and line.adv_complement_id:
-                complement_size_value = line.complement_size()
-                super(SaleOrderLine, line).write({'adv_complement_size': complement_size_value})
         return result
 
     def create(self, values):
         result = super(SaleOrderLine, self.sudo()).create(values)
+        if 'adv_complement_id' in values or 'name' in values:
+            self.recalculate_complement_group(self)
         self._compute_name()
         result.recalculate_unitary_price(values)
-        for line in self:
-            if line.product_id and line.adv_complement_id:
-                complement_size_value = line.complement_size()
-                super(SaleOrderLine, line).write({'adv_complement_size': complement_size_value})
         return result
 
     @api.depends('product_id', 'adv_reference', 'adv_characteristics', 'adv_modification_id', 'adv_complement_id')

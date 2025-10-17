@@ -8,3 +8,4 @@ class ProductCategory(models.Model):
     _inherit = 'product.category'
 
     has_process_control = fields.Boolean(default=False)
+    is_complement_category = fields.Boolean(default=False)
