@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form (in sale_partner_selectable_option_extended)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sale_partner_selectable_option.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sale_selectable']" position="attributes">
+                <attribute name="readonly">type != 'contact' and parent_id != False</attribute>       
+            </xpath>
+        </field>
+    </record>
+</odoo>
