@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-23 06:38+0000\n"
-"PO-Revision-Date: 2025-10-23 06:38+0000\n"
+"POT-Creation-Date: 2025-10-28 10:20+0000\n"
+"PO-Revision-Date: 2025-10-28 10:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -80,6 +80,11 @@ msgid "Adv Unitary Product Price"
 msgstr "Precio unitario del producto"
 
 #. module: sale_order_field_advanced
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.complement_tag_state_wizard_form
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__attribute_id
 msgid "Attribute"
 msgstr "Atributo"
@@ -91,8 +96,27 @@ msgstr "Azul"
 
 #. module: sale_order_field_advanced
 #: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.change_manufacturing_state_wizard_form
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.complement_tag_state_wizard_form
 msgid "Cancel"
 msgstr "Cancelar"
+
+#. module: sale_order_field_advanced
+#: code:addons/sale_order_field_advanced/models/sale_order_line.py:0
+#: model:ir.actions.server,name:sale_order_field_advanced.action_change_complement_and_tag_state
+#: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.complement_tag_state_wizard_form
+#, python-format
+msgid "Change Complement And Tag State"
+msgstr "Cambiar estado de complemento y etiqueta"
+
+#. module: sale_order_field_advanced
+#: model:ir.model,name:sale_order_field_advanced.model_sale_order_line_complement_tag_wizard
+msgid "Change Complement And Tag State Wizard"
+msgstr "Cambiar estado de complemento y etiqueta"
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__change_complement_state
+msgid "Change Complement State"
+msgstr "Cambiar estado de complemento"
 
 #. module: sale_order_field_advanced
 #: code:addons/sale_order_field_advanced/models/sale_order_line.py:0
@@ -105,6 +129,11 @@ msgstr "Cambiar estado de fabricación"
 #: model:ir.model,name:sale_order_field_advanced.model_sale_order_line_manufacturing_state_wizard
 msgid "Change Manufacturing State Wizard"
 msgstr "Cambiar estado de fabricación"
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__change_tag_state
+msgid "Change Tag State"
+msgstr "Cambiar estado de etiqueta"
 
 #. module: sale_order_field_advanced
 #: model_terms:ir.ui.view,arch_db:sale_order_field_advanced.change_manufacturing_state_wizard_form
@@ -124,6 +153,12 @@ msgid "Complement Categories"
 msgstr "Categorías de complemento"
 
 #. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_complement_state
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__adv_complement_state
+msgid "Complement Fabrication State"
+msgstr "Estado de fabricación del complemento"
+
+#. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__name
 msgid "Complement Size"
 msgstr "Talla complemento"
@@ -141,6 +176,7 @@ msgstr "En confección"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__create_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__create_uid
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__create_uid
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__create_uid
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__create_uid
@@ -149,6 +185,7 @@ msgstr "Creado por"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__create_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__create_date
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__create_date
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__create_date
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__create_date
@@ -186,6 +223,7 @@ msgstr "Descripción"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__display_name
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__display_name
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__display_name
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__display_name
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__display_name
@@ -221,6 +259,7 @@ msgstr "Tiene control de proceso"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__id
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__id
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__id
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__id
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__id
@@ -255,6 +294,7 @@ msgstr "Estado inicial"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size____last_update
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard____last_update
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard____last_update
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification____last_update
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status____last_update
@@ -263,6 +303,7 @@ msgstr "Última modificación el"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__write_uid
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__write_uid
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__write_uid
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__write_uid
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__write_uid
@@ -271,6 +312,7 @@ msgstr "Última modificación por"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_product_complement_size__write_date
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__write_date
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__write_date
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_modification__write_date
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__write_date
@@ -278,6 +320,8 @@ msgid "Last Updated on"
 msgstr "Última actualización el"
 
 #. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line__adv_complement_state__manufactured
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_complement_tag_wizard__adv_complement_state__manufactured
 #: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_manufactured
 msgid "Manufactured"
 msgstr "Fabricado"
@@ -314,6 +358,10 @@ msgid "Order Date"
 msgstr "Fecha"
 
 #. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line__adv_complement_state__pending
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line__adv_tag_state__pending
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_complement_tag_wizard__adv_complement_state__pending
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_complement_tag_wizard__adv_tag_state__pending
 #: model:sale.order.line.process.status,name:sale_order_field_advanced.process_status_pending
 msgid "Pending"
 msgstr "Pendiente"
@@ -376,6 +424,7 @@ msgid "Sale Order Line Process Status"
 msgstr "Estado de proceso de línea de pedido de venta"
 
 #. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__line_ids
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_manufacturing_state_wizard__line_ids
 msgid "Sale Order Lines"
 msgstr "Líneas de pedido de venta"
@@ -386,9 +435,27 @@ msgid "Sales Order Line"
 msgstr "Línea de pedido de venta"
 
 #. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line__adv_complement_state__sent
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_complement_tag_wizard__adv_complement_state__sent
+msgid "Sent to Manufacture"
+msgstr "Enviado a fabricar"
+
+#. module: sale_order_field_advanced
 #: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_process_status__sequence
 msgid "Sequence"
 msgstr "Secuencia"
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line__adv_tag_state
+#: model:ir.model.fields,field_description:sale_order_field_advanced.field_sale_order_line_complement_tag_wizard__adv_tag_state
+msgid "Tag State"
+msgstr "Estado etiqueta"
+
+#. module: sale_order_field_advanced
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line__adv_tag_state__tagged
+#: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_complement_tag_wizard__adv_tag_state__tagged
+msgid "Tagged"
+msgstr "Etiquetado"
 
 #. module: sale_order_field_advanced
 #: model:ir.model.fields.selection,name:sale_order_field_advanced.selection__sale_order_line_process_status__decoration_color__warning

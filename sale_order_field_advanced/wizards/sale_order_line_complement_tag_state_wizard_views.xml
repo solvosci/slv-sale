@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="complement_tag_state_wizard_form" model="ir.ui.view">
+        <field name="name">sale.order.line.complement.tag.wizard</field>
+        <field name="model">sale.order.line.complement.tag.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Change Complement And Tag State">
+                <sheet>
+                    <group>
+                        <field name="change_tag_state" widget="boolean_toggle" />
+                        <field name="adv_tag_state" attrs="{'readonly': [('change_tag_state', '=', False)]}"/>
+                    </group>
+                    <group>
+                        <field name="change_complement_state" widget="boolean_toggle" />
+                        <field name="adv_complement_state" attrs="{'readonly': [('change_complement_state', '=', False)]}"/>
+                    </group>
+                    <footer>
+                        <button name="change_complement_and_tag_state" string="Apply" type="object" class="btn-primary"/>
+                        <button string="Cancel" special="cancel" class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

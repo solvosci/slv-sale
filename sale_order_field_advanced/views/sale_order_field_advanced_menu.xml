@@ -37,6 +37,15 @@
         <field name="code"> action=model.open_manufacturing_state_wizard()</field>
     </record>
 
+     <record id="action_change_complement_and_tag_state" model="ir.actions.server">
+        <field name="name">Change Complement And Tag State</field>
+        <field name="model_id" ref="sale.model_sale_order_line" />
+        <field name="binding_model_id" ref="sale.model_sale_order_line" />
+        <field name="binding_type">action</field>
+        <field name="state">code</field>
+        <field name="code"> action=model.open_complement_tag_state_wizard()</field>
+    </record>
+
     <menuitem
         id='modification_menu'
         name='Modifications'
