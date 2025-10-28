@@ -5,7 +5,8 @@ from odoo import models, fields, api, _
 
 
 class SaleOrderLine(models.Model):
-    _inherit = 'sale.order.line'
+    _inherit = ['sale.order.line', 'adv.state.mixin']
+    _name = 'sale.order.line'
 
     name = fields.Text(compute='_compute_name', required=False, readonly=False)
 
@@ -157,6 +158,21 @@ class SaleOrderLine(models.Model):
         return {
             'name': _('Change Manufacturing State'),
             'res_model': 'sale.order.line.manufacturing.state.wizard',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'res_id': new.id,
+            'target': 'new',
+            'type': 'ir.actions.act_window',
+        }
+
+    def open_complement_tag_state_wizard(self):
+        wizard = self.env['sale.order.line.complement.tag.wizard']
+        new = wizard.create({
+            "line_ids": [(4, line_id) for line_id in self.env.context.get("active_ids", [])],})
+
+        return {
+            'name': _('Change Complement And Tag State'),
+            'res_model': 'sale.order.line.complement.tag.wizard',
             'view_mode': 'form',
             'view_type': 'form',
             'res_id': new.id,

@@ -1,3 +1,4 @@
+from . import adv_states_mixin
 from . import sale_order_line
 from . import sale_order_line_modification
 from . import sale_order_line_process_status

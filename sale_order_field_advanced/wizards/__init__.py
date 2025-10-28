@@ -1,1 +1,2 @@
 from . import sale_order_line_manufacturing_state_wizard
+from . import sale_order_line_complement_tag_state_wizard
