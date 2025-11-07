@@ -87,6 +87,7 @@
 				<field name="adv_final_state" invisible="1" />
 				<field name='adv_tag_state' invisible='1' />
 				<field name='adv_complement_state' invisible='1' />
+				<field name='adv_complement_group'/>
 				<separator />
 				<filter name="in_process_state" string="In Process"
 					domain="[('adv_final_state', '=', False)]" />
