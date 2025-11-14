@@ -7,7 +7,7 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "15.0.1.4.0",
+    "version": "15.0.1.5.0",
     "category": "Sales/Sales",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": [
@@ -22,6 +22,7 @@
         'views/sale_order_line_process_status_views.xml',
         'data/sale_order_line_process_status_data.xml',
         'views/sale_order_line_views.xml',
+        'views/sale_order_views.xml',
         'views/product_category_views.xml',
         'views/product_template_views.xml',
         'views/sale_order_field_advanced_menu.xml',

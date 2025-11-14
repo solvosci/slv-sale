@@ -67,6 +67,7 @@
 					decoration-success="adv_manufacturing_state_decoration == 'success'"
 					decoration-muted="adv_manufacturing_state_decoration == 'muted'"
 					decoration-danger="adv_manufacturing_state_decoration == 'danger'" />
+				<field name='adv_requested_delivery_date' optional="show"/>
 				<field name='adv_date_order' />
 			</tree>
 		</field>

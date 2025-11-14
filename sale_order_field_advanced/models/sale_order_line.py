@@ -42,6 +42,12 @@ class SaleOrderLine(models.Model):
 
     adv_unitary_product_price = fields.Float(compute='_compute_adv_unitary_product_price', store=True, readonly=False)
 
+    adv_requested_delivery_date = fields.Date(
+        related='order_id.adv_requested_delivery_date',
+        string='Requested Delivery Date',
+        store=True
+    )
+
     @api.depends("adv_manufacturing_state_id.decoration_color")
     def _compute_adv_manufacturing_state_decoration(self):
         line_with_state = self.filtered(lambda x: x.adv_manufacturing_state_id)

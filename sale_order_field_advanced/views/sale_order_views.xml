@@ -1,0 +1,36 @@
+<odoo>
+    <record id="view_order_form_inherit_requested_delivery_date" model="ir.ui.view">
+        <field name="name">sale.order.form.requested.delivery.date</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                <field name="adv_requested_delivery_date" />
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_order_tree_inherit_requested_delivery_date_confirmed" model="ir.ui.view">
+        <field name="name">sale.order.tree.requested.delivery.date.confirmed</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='commitment_date']" position="after">
+                <field name="adv_requested_delivery_date"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_order_tree_inherit_requested_delivery_date" model="ir.ui.view">
+        <field name="name">sale.order.tree.requested.delivery.date</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='commitment_date']" position="after">
+                <field name="adv_requested_delivery_date" optional='show' />
+            </xpath>
+        </field>
+    </record>
+</odoo>
