@@ -120,7 +120,7 @@ class SaleOrderLine(models.Model):
             line.name = '\n'.join(filter(None, parts))
 
     def recalculate_unitary_price(self, values):
-        watched_fields = ["adv_complement_id", "adv_modification_id", "adv_unitary_product_price", "qty_delivered_manual"]
+        watched_fields = ["adv_complement_id", "adv_modification_id", "adv_unitary_product_price", "qty_delivered_manual", "tax_id", "product_id"]
         manual_created_line = "qty_delivered_manual" in values
 
         if not any(field in watched_fields for field in values) and not manual_created_line:
