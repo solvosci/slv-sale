@@ -1,0 +1,14 @@
+Restrict editing of key Sales Order fields to Billing Administration users:
+    - pricelist_id
+    - payment_term_id
+    - partner_invoice_id
+    - partner_shipping_id
+    - user_id
+    - team_id
+    - company_id
+    - fiscal_position_id
+    - journal_id
+    - mandate_id (from account_banking_mandate_sale)
+    - payment_mode_id (from account_payment_sale)
+    - invoice_policy (from sale_invoice_policy)
+    - type_id (from sale_order_type)
