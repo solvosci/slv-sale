@@ -1,0 +1,28 @@
+<odoo>
+    <data noupdate="1">
+        <record id="sale_order_only_related_contacts" model="ir.rule">
+            <field name="name">Contacts: only access salesman related contacts</field>
+            <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="domain_force">[
+                "|",
+                    ("user_id", "=", user.id),
+                    ("message_partner_ids", "in", user.partner_id.ids)
+            ]</field>
+        </record>
+
+        <record id="sale_order_all_contacts" model="ir.rule">
+            <field name="name">Contacts: access every contact</field>
+            <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman_all_leads'))]"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+        </record>
+
+        <record id="sale_order_all_partner_with_user" model="ir.rule">
+            <field name="name">Contacts: acces all partner with related user</field>
+            <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="domain_force">[("user_ids", "!=", False)]</field>
+        </record>
+    </data>
+</odoo>
