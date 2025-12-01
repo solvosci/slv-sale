@@ -9,7 +9,8 @@ INVOICE_PERIOD_SELECTION = [
     ('fortnightly','Fortnightly'),
     ('monthly','Monthly'),
     ('quarterly','Quarterly'),
-    ('yearly','Yearly')
+    ('yearly','Yearly'),
+    ('undefined','Undefined'),
 ]
 
 class ResPartner(models.Model):

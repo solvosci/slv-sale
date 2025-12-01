@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-22 15:11+0000\n"
-"PO-Revision-Date: 2025-10-22 15:11+0000\n"
+"POT-Creation-Date: 2025-12-01 12:59+0000\n"
+"PO-Revision-Date: 2025-12-01 12:59+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -92,6 +92,13 @@ msgid ""
 "There is no default invoice period set.\n"
 "Add an invoice period on partner or set one by default on:\n"
 "Configuration > Sales > Accounting."
+msgstr ""
+
+#. module: sale_order_partner_invoice_period
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_company__invoice_period_default__undefined
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__res_partner__invoice_period__undefined
+#: model:ir.model.fields.selection,name:sale_order_partner_invoice_period.selection__sale_order__partner_invoice_period__undefined
+msgid "Undefined"
 msgstr ""
 
 #. module: sale_order_partner_invoice_period
