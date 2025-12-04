@@ -5,7 +5,7 @@
     "summary": """ Adds selection of period to invoice direction """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "17.0.1.1.0",
+    "version": "17.0.1.2.0",
     "category": "Sales/Sales",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": [

@@ -14,12 +14,11 @@ class SaleOrder(models.Model):
         readonly=False,
     )
 
-    @api.depends('partner_invoice_id.invoice_period', 'partner_invoice_id.parent_id.invoice_period')
+    @api.depends('partner_id.invoice_period','partner_id.parent_id.invoice_period')
     def _compute_partner_invoice_period(self):
         for order in self.filtered(lambda o: o.state in ('draft', 'sent')):
             order.partner_invoice_period = (
-                order.partner_invoice_id.invoice_period
+                order.partner_id.invoice_period
                 or
-                order.partner_invoice_id.parent_id.invoice_period
+                order.partner_id.parent_id.invoice_period
             )
-
