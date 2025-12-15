@@ -6,7 +6,8 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//group[@name='sale_info']//field[@name='invoice_status']" position="after">
-                <field name="partner_invoice_period" readonly="state not in ('draft','sent')"/>
+                <field name="partner_invoice_period" readonly="state not in ('draft','sent')" groups="account.group_account_manager"/>
+                <field name="partner_invoice_period" readonly="1" groups="!account.group_account_manager" force_save="1"/>
             </xpath>
         </field>
     </record>
