@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_order_to_invoice
+# 	* sale_order_to_invoice_untaxed
 #
 msgid ""
 msgstr ""
@@ -15,37 +15,37 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: sale_order_to_invoice
-#: model:ir.model,name:sale_order_to_invoice.model_sale_order
+#. module: sale_order_to_invoice_untaxed
+#: model:ir.model,name:sale_order_to_invoice_untaxed.model_sale_order
 msgid "Sales Order"
 msgstr "Pedido de venta"
 
-#. module: sale_order_to_invoice
-#: model:ir.model,name:sale_order_to_invoice.model_sale_order_line
+#. module: sale_order_to_invoice_untaxed
+#: model:ir.model,name:sale_order_to_invoice_untaxed.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Línea de pedido de venta"
 
-#. module: sale_order_to_invoice
-#: model:ir.model.fields,help:sale_order_to_invoice.field_sale_order_line__price_unit_wd
+#. module: sale_order_to_invoice_untaxed
+#: model:ir.model.fields,help:sale_order_to_invoice_untaxed.field_sale_order_line__price_unit_wd
 msgid "Technical field for pending invoicing amount data"
 msgstr "Campo técnico para el dato de importe pendiente de facturar"
 
-#. module: sale_order_to_invoice
-#: model:ir.model.fields,field_description:sale_order_to_invoice.field_sale_order__amount_to_invoice
+#. module: sale_order_to_invoice_untaxed
+#: model:ir.model.fields,field_description:sale_order_to_invoice_untaxed.field_sale_order__amount_to_invoice_untaxed
 msgid "To Invoice"
 msgstr "Pend. fact."
 
-#. module: sale_order_to_invoice
-#: model_terms:ir.ui.view,arch_db:sale_order_to_invoice.view_order_tree
+#. module: sale_order_to_invoice_untaxed
+#: model_terms:ir.ui.view,arch_db:sale_order_to_invoice_untaxed.view_order_tree
 msgid "Total To Invoice Tax Excluded"
 msgstr "Total a facturar (impuestos excluidos)"
 
-#. module: sale_order_to_invoice
-#: model:ir.model.fields,help:sale_order_to_invoice.field_sale_order__amount_to_invoice
+#. module: sale_order_to_invoice_untaxed
+#: model:ir.model.fields,help:sale_order_to_invoice_untaxed.field_sale_order__amount_to_invoice_untaxed
 msgid "Total amount currently pending to invoice (tax excl.)"
 msgstr "Importe total pendiente de facturar (impuestos excluidos)"
 
-#. module: sale_order_to_invoice
-#: model:ir.model.fields,field_description:sale_order_to_invoice.field_sale_order_line__price_unit_wd
+#. module: sale_order_to_invoice_untaxed
+#: model:ir.model.fields,field_description:sale_order_to_invoice_untaxed.field_sale_order_line__price_unit_wd
 msgid "Unit Price W/discount"
 msgstr "Precio unitario con descuento"

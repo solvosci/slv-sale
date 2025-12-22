@@ -1,9 +1,9 @@
 # © 2022 Solvos Consultoría Informática (<http://www.solvos.es>)
 # License LGPL-3 - See http://www.gnu.org/licenses/lgpl-3.0.html
 {
-    "name": "Sale Order - To Invoice amount",
+    "name": "Sale Order - To Invoice Untaxed amount",
     "summary": """
-        Adds pending invoice amount for Sale Orders
+        Adds pending invoice amount (without taxes) for Sale Orders
     """,
     "author": "Solvos",
     "license": "LGPL-3",
