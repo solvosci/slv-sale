@@ -1,0 +1,26 @@
+<odoo>
+    <record id="sale_order_view_form" model="ir.ui.view">
+        <field name="name">sale.order.form (Sale Order Header Carrier)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+                <field name="carrier_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sales_order_filter" model="ir.ui.view">
+        <field name="name">sale.order.list.select (Sale Order Header Carrier)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_sale_orders_filter']" position="after">
+                <filter name="carrier_id" string="Carrier"/>
+            </xpath>
+            <xpath expr="//filter[@name='order_month']" position="after">
+                <filter name="carrier_id" string="Carrier" context="{'group_by': 'carrier_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
