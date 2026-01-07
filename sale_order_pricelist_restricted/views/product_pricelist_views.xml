@@ -1,0 +1,58 @@
+<odoo>
+    <record id="product_pricelist_view_search" model="ir.ui.view">
+        <field name="name">product.pricelist.search (in sale_order_pricelist_restricted)</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view_search" />
+        <field name="arch" type="xml">
+            <field name="currency_id" position="after">
+                <field name="sale_order_exclusive_partner_id" />
+            </field>
+            <filter name="inactive" position="after">
+                <separator />
+                <filter
+                    string="Selectable in Sales Orderes"
+                    name="is_sale_order_selectable"
+                    domain="[('sale_order_selectable', '=', True)]"
+                />
+            </filter>
+        </field>
+    </record>
+
+    <record id="product_pricelist_view_tree" model="ir.ui.view">
+        <field name="name">product.pricelist.tree (in sale_order_pricelist_restricted)</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view_tree" />
+        <field name="arch" type="xml">
+            <field name="discount_policy" position="after">
+                <field name="sale_order_selectable" optional="show" />
+                <field name="sale_order_exclusive_partner_id" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record id="product_pricelist_view" model="ir.ui.view">
+        <field name="name">product.pricelist.form (in sale_order_pricelist_restricted)</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view" />
+        <field name="arch" type="xml">
+            <group name="pricelist_discounts" position="after">
+                <group name="sales_order_restrictions" string="Sales Order Restrictions">
+                    <field
+                        name="sale_order_selectable"
+                        string="Selectable"
+                    />
+                    <field
+                        name="sale_order_exclusive_partner_id"
+                        string="Exclusive Partner"
+                    />
+                    <field
+                        name="salesman_user_ids"
+                        widget="many2many_tags"
+                        readonly="1"
+                        groups="base.group_no_one"
+                    />
+                </group>
+            </group>        
+        </field>
+    </record>
+</odoo>
