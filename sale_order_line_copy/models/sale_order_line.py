@@ -10,6 +10,6 @@ class SaleOrderLine(models.Model):
 
     def copy_sol(self):
         for line in self:
-            if line.order_id.state in ["cancel", "done"]:
+            if line.order_id.state == "cancel" or line.order_id.locked:
                 raise UserError(_("You cannot copy lines from a canceled or locked sale order."))
             line.copy(default={'order_id': line.order_id.id})
