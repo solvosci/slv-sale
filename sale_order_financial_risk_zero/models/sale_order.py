@@ -13,7 +13,7 @@ class SaleOrder(models.Model):
 
         risk_amount = self.currency_id._convert(
             self.amount_total,
-            self.company_id.currency_id,
+            partner.risk_currency_id,
             self.company_id,
             self.date_order and self.date_order.date() or fields.Date.context_today(self),
             round=False,
