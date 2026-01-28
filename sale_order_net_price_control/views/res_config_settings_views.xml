@@ -1,0 +1,14 @@
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form (sale_order_net_price_control)</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='show_margins']" position="after">
+                <setting id="pricelist" string="Pricelist" help="Reference base pricelist for minimum price control">
+                    <field name="lowest_pricelist_id"/>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>
