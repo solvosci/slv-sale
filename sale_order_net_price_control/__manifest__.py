@@ -19,5 +19,10 @@
         "views/sale_order_views.xml",
         "views/product_pricelist_item_views.xml"
     ],
+    "assets": {
+        "point_of_sale._assets_pos": [
+            "sale_order_net_price_control/static/src/payment.js",
+        ],
+    },
     'installable': True,
 }
