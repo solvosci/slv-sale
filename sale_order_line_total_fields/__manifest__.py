@@ -8,9 +8,14 @@
     """,
     "author": "Solvos",
     "license": "LGPL-3",
-    "version": "13.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Sale",
     "website": "https://github.com/solvosci/slv-sale",
     "depends": ["sale"],
     "data": ["views/sale_order_views.xml"],
+    "assets": {
+        "web.assets_backend": [
+            "sale_order_line_total_fields/static/src/list_renderer_digits_patch.esm.js",
+        ],
+    },
 }
