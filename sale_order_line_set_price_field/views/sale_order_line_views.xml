@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_line_tree" model="ir.ui.view">
+        <field name="name">sale.order.line.tree (in sale_order_line_set_price_field)</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.view_order_line_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="set_price" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_sales_order_line_filter" model="ir.ui.view">
+        <field name="name">sale.order.line.select (in sale_order_line_set_price_field)</field>
+        <field name="model">sale.order.line</field>
+        <field name="inherit_id" ref="sale.view_sales_order_line_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='my_sales_order_lines']" position="after">
+                <separator/>
+                <filter string="With Set Price" name="with_set_price" domain="[('set_price','=','yes')]"/>
+                <filter string="Without Set Price" name="without_set_price" domain="[('set_price','=','no')]"/>
+            </xpath>
+            <xpath expr="//filter[@name='salesperson']" position="after">
+                <filter string="Set Price" name="set_price" domain="[]" context="{'group_by':'set_price'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
