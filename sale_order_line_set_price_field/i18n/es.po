@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_line_set_price_field
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 07:05+0000\n"
+"PO-Revision-Date: 2026-05-29 07:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_line_set_price_field
+#: model:ir.model.fields.selection,name:sale_order_line_set_price_field.selection__sale_order__set_price_lines__no
+#: model:ir.model.fields.selection,name:sale_order_line_set_price_field.selection__sale_order_line__set_price__no
+msgid "No"
+msgstr "No"
+
+#. module: sale_order_line_set_price_field
+#: model:ir.model,name:sale_order_line_set_price_field.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sale_order_line_set_price_field
+#: model:ir.model,name:sale_order_line_set_price_field.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: sale_order_line_set_price_field
+#: model:ir.model.fields,field_description:sale_order_line_set_price_field.field_sale_order_line__set_price
+#: model_terms:ir.ui.view,arch_db:sale_order_line_set_price_field.view_sales_order_line_filter
+msgid "Set Price"
+msgstr "Fijar precio"
+
+#. module: sale_order_line_set_price_field
+#: model:ir.model.fields,field_description:sale_order_line_set_price_field.field_sale_order__set_price_lines
+msgid "Set Price Lines"
+msgstr "Fijar precio en líneas de pedido"
+
+#. module: sale_order_line_set_price_field
+#: code:addons/sale_order_line_set_price_field/models/sale_order.py:0
+#: code:addons/slv-sale/sale_order_line_set_price_field/models/sale_order.py:0
+#, python-format
+msgid ""
+"There's at least one line without 'set price' field filled, please check"
+msgstr "Hay al menos una línea en la que no se ha rellenado el campo 'precio fijado', por favor compruébalo."
+
+#. module: sale_order_line_set_price_field
+#: model_terms:ir.ui.view,arch_db:sale_order_line_set_price_field.view_sales_order_line_filter
+msgid "With Set Price"
+msgstr "Con precio fijado"
+
+#. module: sale_order_line_set_price_field
+#: model_terms:ir.ui.view,arch_db:sale_order_line_set_price_field.view_sales_order_line_filter
+msgid "Without Set Price"
+msgstr "Sin precio fijado"
+
+#. module: sale_order_line_set_price_field
+#: model:ir.model.fields.selection,name:sale_order_line_set_price_field.selection__sale_order__set_price_lines__yes
+#: model:ir.model.fields.selection,name:sale_order_line_set_price_field.selection__sale_order_line__set_price__yes
+msgid "Yes"
+msgstr "Sí"
