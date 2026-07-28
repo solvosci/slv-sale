@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="fcd_sale_report_invoice_search" model="ir.ui.view">
+    <field name="name">fcd.sale.report.invoice.search</field>
+    <field name="model">fcd.sale.report.invoice</field>
+    <field name="arch" type="xml">
+        <search string="Sales &amp; Invoice Margin per Operation">
+          <field name="product_id" />
+          <field name="lot_id" />
+          <field name="po_partner_id" />
+          <field name="so_partner_id" />
+          <filter string="Sold Last Month" name="filter_date_order_this_month" domain="[('date_order','&gt;', (context_today() - datetime.timedelta(days=30)).strftime('%%Y-%%m-%%d'))]" />
+          <filter string="Sale Date" name="filter_date_order" date="date_order" />
+          <group expand="1" string="Group By">
+            <filter string="Product" name="group_product_id" context="{'group_by':'product_id'}"/>
+            <filter string="Lot" name="group_lot_id" context="{'group_by':'lot_id'}"/>
+            <filter string="Partner" name="group_po_partner_id" context="{'group_by':'po_partner_id'}"/>
+            <filter string="Customer" name="group_so_partner_id" context="{'group_by':'so_partner_id'}"/>
+            <filter string="Sale Date" name="group_date_order" context="{'group_by':'date_order'}" />
+          </group>
+        </search>
+    </field>
+  </record>
+
+  <record id="fcd_sale_report_invoice_tree" model="ir.ui.view">
+    <field name="name">fcd.sale.report.invoice.tree</field>
+    <field name="model">fcd.sale.report.invoice</field>
+    <field name="arch" type="xml">
+        <tree string="Sales &amp; Invoice Margin per Operation" default_order="date_order desc">
+          <field name="currency_id" invisible="1"/>
+          <field name="company_id" invisible="1"/>
+          <field name="date_order" />
+          <field name="origin_warehouse_id" />
+          <field name="po_partner_id" />
+          <field name="so_partner_id" />
+          <field name="product_id" />
+          <field name="lot_id" />
+          <field name="so_sml_qty_done" />
+          <field name="smls_qty_invoiced" />
+          <field name="sale_price_kg" />
+          <field name="fcd_purchase_price_kg" />
+          <field name="smls_amount_base" />
+          <field name="smls_price_subtotal" />
+          <field name="margin_net" />
+          <field name="margin_net_invoiced" />
+          <field name="margin_pct" widget="percentage" />
+          <field name="margin_pct_invoiced" widget="percentage" />
+        </tree>
+    </field>
+  </record>
+
+</odoo>
