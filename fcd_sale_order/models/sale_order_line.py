@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models, api, _
+from odoo.exceptions import ValidationError
 
 
 class SaleOrderLine(models.Model):
@@ -15,6 +16,31 @@ class SaleOrderLine(models.Model):
         process
         """,
     )
+    lot_product_unique = fields.Char(
+        inverse='_set_lot_product_unique',
+        help="""
+        Technical field to help sales order imports select the correct lot
+        using the lot name and product id in this format 'LOT00001 - 12345'
+        """,
+    )
+
+    def _set_lot_product_unique(self):
+        for record in self:
+            data = record.lot_product_unique.split(' - ')
+            if len(data) == 2:
+                lot_name = data[0]
+                product_id = data[1]
+                lot_id = self.env['stock.production.lot'].search([('name', '=', lot_name), ('product_id.id', '=', product_id)])
+                if lot_id:
+                    record.lot_id = lot_id
+                else:
+                    raise ValidationError(
+                        _("Lot not found for: {}".format(record.lot_product_unique))
+                    )
+            else:
+                raise ValidationError(
+                    _("Wrong format for: {}, should be like: 'LOT00001 - 12345'".format(record.lot_product_unique))
+                )
 
     @api.depends('product_id', 'company_id', 'currency_id', 'product_uom', 'lot_id')
     def _compute_purchase_price(self):
