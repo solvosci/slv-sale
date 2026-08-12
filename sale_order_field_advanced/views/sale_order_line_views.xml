@@ -73,6 +73,57 @@
 		</field>
 	</record>
 
+	<record id='view_sale_order_line_form_extend' model='ir.ui.view'>
+		<field name='name'>sale.order.line.form</field>
+		<field name='model'>sale.order.line</field>
+		<field name="priority">999</field>
+		<field name="mode">primary</field>
+		<field name='arch' type='xml'>
+			<form>
+				<field name='state' invisible='1' />
+				<field name='adv_product_has_process_control' invisible='1' />
+				<field name="adv_manufacturing_state_decoration" invisible='1' />
+				<field name='company_id' invisible='1' />
+				<sheet>
+					<group>
+						<group>
+							<field name='order_id' />
+							<field name='order_partner_id' />
+							<field name='product_id' />
+							<field name='product_uom_qty' />
+						</group>
+						<group>
+							<field name='adv_tag_state' widget="badge" />
+							<field name='adv_complement_group' />
+							<field name='adv_complement_state' widget="badge" />
+							<field name="adv_manufacturing_state_id" widget="badge"
+								decoration-info="adv_manufacturing_state_decoration == 'info'"
+								decoration-warning="adv_manufacturing_state_decoration == 'warning'"
+								decoration-success="adv_manufacturing_state_decoration == 'success'"
+								decoration-muted="adv_manufacturing_state_decoration == 'muted'"
+								decoration-danger="adv_manufacturing_state_decoration == 'danger'" />
+						</group>
+					</group>
+					<group>
+						<group>
+							<field name='adv_reference' />
+							<field name='adv_is_tailored' />
+							<field name='adv_characteristics' />
+							<field name='adv_modification_id' />
+						</group>
+						<group>
+							<field name='adv_requested_delivery_date' />
+							<field name='adv_date_order' />
+						</group>
+					</group>
+					<group>
+						<field name='adv_note' />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
 	<record id='view_sale_order_line_search_custom' model='ir.ui.view'>
 		<field name='name'>sale.order.line.search</field>
 		<field name='model'>sale.order.line</field>

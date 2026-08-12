@@ -24,7 +24,9 @@
         <field name='domain'>[('adv_product_has_process_control', '=', True), ('state', '=', 'sale'
             )]</field>
         <field name='context'>{'modification_display_name':True, 'search_default_in_process_state': 1}</field>
-        <field name='view_id' ref='view_sale_order_line_tree_extend' />
+        <field name='view_ids' eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('view_sale_order_line_tree_extend')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_sale_order_line_form_extend')})]" />
         <field name='search_view_id' ref='view_sale_order_line_search_custom' />
     </record>
 
