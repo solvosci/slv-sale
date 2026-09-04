@@ -12,7 +12,6 @@ class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
     invoice_period_default = fields.Selection(
-        selection=INVOICE_PERIOD_SELECTION,
         related='company_id.invoice_period_default',
         help="Select default invoice period for new partners (Companies or Contacts).",
         readonly=False
