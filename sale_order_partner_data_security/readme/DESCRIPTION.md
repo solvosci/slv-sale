@@ -1,0 +1,1 @@
+Restrict partner information changes on the sales order by security group.
