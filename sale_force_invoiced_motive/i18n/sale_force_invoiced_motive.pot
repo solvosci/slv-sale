@@ -1,0 +1,121 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_force_invoiced_motive
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-10 12:37+0000\n"
+"PO-Revision-Date: 2024-12-10 12:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model,name:sale_force_invoiced_motive.model_force_invoiced_motive_wizard
+msgid "Add forced invoiced motives"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__force_invoiced_motive_wizard__motive__advance
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__sale_order__force_invoiced_motive__advance
+msgid "Advance"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model_terms:ir.ui.view,arch_db:sale_force_invoiced_motive.force_invoiced_motive_wizard_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__force_invoiced_motive_wizard__motive__completed/invoiced
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__sale_order__force_invoiced_motive__completed/invoiced
+msgid "Completed/Invoiced"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__force_invoiced_motive_wizard__motive__deposit
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__sale_order__force_invoiced_motive__deposit
+msgid "Deposit"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#. odoo-python
+#: code:addons/sale_force_invoiced_motive/models/sale_order.py:0
+#: model:ir.actions.server,name:sale_force_invoiced_motive.model_sale_order_action_force_invoiced
+#, python-format
+msgid "Force Invoiced"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_sale_order__force_invoiced_motive
+#: model_terms:ir.ui.view,arch_db:sale_force_invoiced_motive.force_invoiced_motive_wizard_view_form
+msgid "Force Invoiced Motive"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__motive
+msgid "Motive"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__force_invoiced_motive_wizard__motive__others
+#: model:ir.model.fields.selection,name:sale_force_invoiced_motive.selection__sale_order__force_invoiced_motive__others
+msgid "Others"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model.fields,field_description:sale_force_invoiced_motive.field_force_invoiced_motive_wizard__sale_order_ids
+msgid "Sale Order"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model:ir.model,name:sale_force_invoiced_motive.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#: model_terms:ir.ui.view,arch_db:sale_force_invoiced_motive.force_invoiced_motive_wizard_view_form
+msgid "Save"
+msgstr ""
+
+#. module: sale_force_invoiced_motive
+#. odoo-python
+#: code:addons/sale_force_invoiced_motive/wizard/force_invoiced_motive_wizard.py:0
+#, python-format
+msgid "The motive can´t be empty"
+msgstr ""
