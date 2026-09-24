@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_net_price_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-03 08:43+0000\n"
+"PO-Revision-Date: 2025-12-03 08:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_net_price_control
+#: model:ir.model,name:sale_order_net_price_control.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sale_order_net_price_control
+#: model:ir.model,name:sale_order_net_price_control.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: sale_order_net_price_control
+#. odoo-python
+#: code:addons/sale_order_net_price_control/models/sale_order_line.py:0
+#, python-format
+msgid ""
+"Net price of '%s', '%.2f' must be higher that the last purchase invoice "
+"price '%s'"
+msgstr ""
+"El precio neto de '%s', '%.2f' debe ser mayor que el precio de la última "
+"factura de compra '%s'"
+
+#. module: sale_order_net_price_control
+#. odoo-python
+#: code:addons/sale_order_net_price_control/models/sale_order_line.py:0
+#, python-format
+msgid ""
+"Net price of '%s', '%.2f' must be higher that the lowest pricelist '%s', "
+"'%s'"
+msgstr ""
+"El precio neto de '%s', '%.2f' debe ser mayor que el precio de la tarifa "
+"'%s','%s'"
+
+#. module: sale_order_net_price_control
+#: model:ir.model.fields,field_description:sale_order_net_price_control.field_product_pricelist_item__offer_price
+#: model:ir.model.fields,field_description:sale_order_net_price_control.field_sale_order_line__offer_price
+msgid "Offer Price"
+msgstr "Precio de oferta"
+
+#. module: sale_order_net_price_control
+#: model:ir.model.fields,field_description:sale_order_net_price_control.field_res_company__lowest_pricelist_id
+#: model:ir.model.fields,field_description:sale_order_net_price_control.field_res_config_settings__lowest_pricelist_id
+#: model_terms:ir.ui.view,arch_db:sale_order_net_price_control.res_config_settings_view_form
+msgid "Pricelist"
+msgstr "Tarifa"
+
+#. module: sale_order_net_price_control
+#: model:ir.model,name:sale_order_net_price_control.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr "Regla de la lista de precios"
+
+#. module: sale_order_net_price_control
+#: model:ir.model,name:sale_order_net_price_control.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: sale_order_net_price_control
+#: model_terms:ir.ui.view,arch_db:sale_order_net_price_control.res_config_settings_view_form
+msgid "Reference base pricelist for minimum price control"
+msgstr "Tarifa base de referencia para control de precios mínimos"
+
+#. module: sale_order_net_price_control
+#: model:ir.model,name:sale_order_net_price_control.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: sale_order_net_price_control
+#: model:res.groups,name:sale_order_net_price_control.group_sale_at_any_price
+msgid "Sell Products at Any Price"
+msgstr "Vender productos a cualquier precio"

@@ -1,0 +1,9 @@
+<odoo>
+
+    <record id="group_sale_at_any_price" model="res.groups">
+        <field name="name">Sell Products at Any Price</field>
+        <field name="implied_ids" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+</odoo>

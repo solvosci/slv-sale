@@ -1,0 +1,14 @@
+<odoo>
+
+    <record id="product_pricelist_item_form_view" model="ir.ui.view">
+        <field name="name">product_pricelist_item_form_view (in sale_order_net_price_control)</field>
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='compute_price']" position="after">
+                <field name="offer_price" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
