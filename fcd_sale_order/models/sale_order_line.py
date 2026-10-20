@@ -16,14 +16,16 @@ class SaleOrderLine(models.Model):
         """,
     )
 
-    @api.depends('product_id', 'company_id', 'currency_id', 'product_uom', 'lot_id')
+    @api.depends('product_id', 'company_id', 'currency_id', 'product_uom', 'lot_id', 'lot_id.fcd_document_line_id.purchase_order_line_id.fcd_lot_finished', 'lot_id.fcd_origin_lot_id.fcd_document_line_id.purchase_order_line_id.fcd_lot_finished')
     def _compute_purchase_price(self):
         super(SaleOrderLine, self)._compute_purchase_price()
         for line in self:
-            if line.lot_id.fcd_origin_lot_id:
+            if line.lot_id.fcd_origin_lot_id.fcd_document_line_id and line.lot_id.fcd_origin_lot_id.fcd_document_line_id.purchase_order_line_id.fcd_lot_finished:
                 line.purchase_price = line.lot_id.fcd_origin_lot_id.fcd_document_line_id.price_real_kg
-            elif line.lot_id.fcd_document_line_id:
+            elif line.lot_id.fcd_document_line_id and line.lot_id.fcd_document_line_id.purchase_order_line_id.fcd_lot_finished:
                 line.purchase_price = line.lot_id.fcd_document_line_id.price_real_kg
+            elif line.lot_id.fcd_document_line_id.purchase_order_line_id:
+                line.purchase_price = line.lot_id.fcd_document_line_id.purchase_order_line_id.price_unit
 
     @api.constrains('product_uom_qty')
     def _contrains_drag_to_stock_move(self):
