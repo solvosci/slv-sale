@@ -99,8 +99,9 @@ class SaleOrderLine(models.Model):
 
     def create(self, values):
         result = super(SaleOrderLine, self.sudo()).create(values)
-        if 'adv_complement_id' in values or 'name' in values:
-            self.recalculate_complement_group(self)
+        for val in values:
+            if val.get('adv_complement_id') or val.get('name'):
+                self.recalculate_complement_group(result)
         self._compute_name()
         result.recalculate_unitary_price(values)
         return result
