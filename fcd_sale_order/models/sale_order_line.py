@@ -26,6 +26,8 @@ class SaleOrderLine(models.Model):
                 line.purchase_price = line.lot_id.fcd_document_line_id.price_real_kg
             elif line.lot_id.fcd_document_line_id.purchase_order_line_id:
                 line.purchase_price = line.lot_id.fcd_document_line_id.purchase_order_line_id.price_unit
+            elif line.lot_id.fcd_origin_lot_id.fcd_document_line_id.purchase_order_line_id:
+                line.purchase_price = line.lot_id.fcd_origin_lot_id.fcd_document_line_id.purchase_order_line_id.price_unit
 
     @api.constrains('product_uom_qty')
     def _contrains_drag_to_stock_move(self):
